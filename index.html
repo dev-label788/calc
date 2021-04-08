@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="naver-site-verification" content="65a47e7fc6ad72cbceb4efe2725b606ed308414e">
+	<meta name="description" content="묶음 상품 단가 계산할때, 상품 할인율 및 할인금액 계산할땐 마트랑계산기를 사용 하세요.">
+	<meta property="og:title" content="마트랑계산기 - 마트갈때 필수품">
+	<meta property="og:description" content="묶음 상품 단가 계산할때, 상품 할인율 및 할인금액 계산할땐 마트랑계산기를 사용 하세요.">
+	<meta property="og:image" content="https://www.goodprice.kro.kr/img/icon-800x800-og.png">
+	<meta property="og:url" content="https://www.goodprice.kro.kr">
+	<meta property="og:type" content="website">
+	<link rel="canonical" href="https://www.goodprice.kro.kr/index.html">
+
+	<!-- Google Tag Manager -->
+	<script>
+		(function(w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src =
+				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-52KFZCV');
+	</script>
+	<!-- End Google Tag Manager -->
+	<!--애널리틱스 시작-->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZN6KFQFXL5"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'G-ZN6KFQFXL5');
+	</script>
+	<!--애널리틱스 종료-->
+
+	<title>마트랑계산기 - 마트갈때 필수품</title>
+	<link rel="preload" as="font" href="font/GmarketSansTTFLight.woff" crossorigin="anonymous">
+	<link rel="preload" as="style" href="css/common.css" crossorigin="crossorigin">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="shortcut icon" href="https://www.goodprice.kro.kr/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="calculator/calculator.css">
+	<!--[if lt IE 9]>
+	<script src="js/ie9.min.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/lotto.js"></script>
+	<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+
+	<!-- JSON-LD 형식 -->
+	<script type=”application/ld+json”>
+		{
+			“
+			@context”: “http: //schema.org”,
+				“@type”: “WebSite”,
+			“url”: “https: //www.goodprice.kro.kr“,
+				“name”: “마트랑계산기 - 마트갈때 필수품“,
+			“author”: {
+				“
+				@type”: “Person”,
+				“name”: “LABEL788”
+			},
+			“description”: “묶음 상품 단가 계산할때,
+			상품 할인율 및 할인금액 계산할땐 마트랑계산기를 사용 하세요.“,
+			“sameAs”: [“http: //xn--9i2b05bh14b.xn--yq5b.xn--3e0b707e/“,
+				“http: //xn--989a00a09r1icwsni91a.xn--yq5b.xn--3e0b707e/“
+			]
+		}
+	</script>
+
+	<!-- PWA화, 여기부터 -->
+	<!-- [iOS 사파리에 대응] -->
+	<!-- 주소창 등의 웹 브라우저 UI를 표시하지 않기 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<!-- 상태 바의 스타일을 지정 -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<!-- 홈 화면에서 표시되는 앱 이름을 지정 -->
+	<meta name="application-name" content="마트랑계산기">
+	<meta name="apple-mobile-web-app-title" content="마트랑계산기">
+	<!-- 홈 화면에서 표시되는 앱 아이콘을 지정 -->
+	<link rel="apple-touch-icon" href="/img/touch-icon-iphone.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/img/touch-icon-iphone-120x120.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/img/touch-icon-ipad.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/touch-icon-iphone-retina.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="/img/touch-icon-ipad-retina.png">
+	<link rel="apple-touch-startup-image" href="/img/touch-launch.png">
+
+	<!-- [Android와 PC, 크롬·엣지에 대응] -->
+	<!-- 웹 앱 매니페스트를 읽어 들이기 -->
+	<link rel="manifest" href="manifest.webmanifest">
+	<!-- 서비스 워커를 등록 -->
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('js/iconsw.js')
+				.then((reg) => {
+					console.log('서비스 워커가 등록됨.', reg);
+				});
+		}
+	</script>
+	<!-- PWA화, 여기까지 -->
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-52KFZCV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<header>
+		<h1><img src="img/logo.jpg" alt="마트랑계산기 로고이미지"><span>마트랑 계산기 :: 마트갈때 필수품</span></h1>
+	</header>
+
+	<nav>
+		<div class="btn-menu open">
+			<img id="gtm-menu" src="img/iconmonstr-menu-5-24.png" alt="menu button">
+		</div>
+		<div onclick="history.back();" class="btn-close">
+			<img src="img/iconmonstr-x-mark-thin-24.png" alt="close button">
+		</div>
+		<div onclick="history.back();" class="menu-box"></div>
+		<div class="menu-list">
+			<p>유튜브 채널 추천</p>
+			<ul>
+				<li><img src="img/iconmonstr-cat-2-24.svg" alt="">동물 힐링<span>&dtrif;</span></li>
+				<li>
+					<ul>
+						<li><a target="_blank" href="https://www.youtube.com/channel/UCkuA_gDjISfGgbdp02BUwyQ">크집사 &rsaquo;&rsaquo;</a></li>
+						<li><a target="_blank" href="https://www.youtube.com/channel/UCCb6W2FU1L7j9mw14YK-9yg">김메주와 고양이들 &rsaquo;&rsaquo;</a></li>
+						<li><a target="_blank" href="https://www.youtube.com/channel/UCnPRslWJm1Na6DUuTuSZ12A">노곤하개냥TV &rsaquo;&rsaquo;</a></li>
+					</ul>
+				</li>
+				<li><img src="img/iconmonstr-generation-2.svg" alt="">가족 힐링<span>&dtrif;</span></li>
+				<li>
+					<ul>
+						<li><a target="_blank" href="https://www.youtube.com/channel/UCPWYKPjht6ewtJZJ4DrpO1Q">브로터 &rsaquo;&rsaquo;</a></li>
+						<li><a target="_blank" href="https://www.youtube.com/c/%EB%9A%9C%EC%95%84%EB%9A%9C%EC%A7%80TV/videos">뚜아뚜지TV &rsaquo;&rsaquo;</a></li>
+					</ul>
+				</li>
+				<li><img src="img/icon-meal.svg" alt="">요리 힐링<span>&dtrif;</span></li>
+				<li>
+					<ul>
+						<li><a target="_blank" href="https://www.youtube.com/channel/UCyn-K7rZLXjGl7VXGweIlcA">백종원의 요리비책 &rsaquo;&rsaquo;</a></li>
+						<li><a target="_blank" href="https://www.youtube.com/channel/UCkGr7BCJ8plP-Jhy4kSfP8w">캠핑한끼 &rsaquo;&rsaquo;</a></li>
+						<li><a target="_blank" href="https://www.youtube.com/channel/UCNITpsY7Iz0XzQJbiWgKEBw">happycooking120180 &rsaquo;&rsaquo;</a></li>
+					</ul>
+				</li>
+				<li><img src="img/iconmonstr-video-camera-10-24.png" alt="">영화 리뷰<span>&dtrif;</span></li>
+				<li>
+					<ul>
+						<li><a target="_blank" href="https://www.youtube.com/user/13neye">김시선 &rsaquo;&rsaquo;</a></li>
+						<li><a target="_blank" href="https://www.youtube.com/channel/UCaHGOzOyeYzLQeKsVkfLEGA">지무비 &rsaquo;&rsaquo;</a></li>
+						<li><a target="_blank" href="https://www.youtube.com/channel/UCXvftM-43hGjGc1TA-8Y_IA/featured">동네비디오방 &rsaquo;&rsaquo;</a></li>
+					</ul>
+				</li>
+				<li><img src="img/iconmonstr-car-4-24.png" alt="">자동차<span>&dtrif;</span></li>
+				<li>
+					<ul>
+						<li><a target="_blank" href="https://www.youtube.com/channel/UCT29dZNPg6exiMyMrVLL0fg">미디어오토 &rsaquo;&rsaquo;</a></li>
+						<li><a target="_blank" href="https://www.youtube.com/user/digitrio">김한용의MOCAR &rsaquo;&rsaquo;</a></li>
+					</ul>
+				</li>
+				<li><img src="img/iconmonstr-coin-2-24.png" alt="">부동산 경제<span>&dtrif;</span></li>
+				<li>
+					<ul>
+						<li><a target="_blank" href="https://www.youtube.com/channel/UCsJ6RuBiTVWRX156FVbeaGg">슈카월드 &rsaquo;&rsaquo;</a></li>
+						<li><a target="_blank" href="https://www.youtube.com/channel/UC2QeHNJFfuQWB4cy3M-745g">부동산읽어주는남자 &rsaquo;&rsaquo;</a></li>
+						<li><a target="_blank" href="https://www.youtube.com/channel/UCAVdqlngIAxHtwlCA2hjv3A/videos">집코노미TV &rsaquo;&rsaquo;</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="wrap">
+		<main>
+			<!--계산기 선택하기-->
+			<div class="select-box">
+				<div class="options-container">
+					<div class="option">
+						<input type="radio" class="radio" id="calc-1" name="category" />
+						<label for="calc-1">단위당 계산기</label>
+					</div>
+					<div class="option">
+						<input type="radio" class="radio" id="calc-2" name="category" />
+						<label for="calc-2">할인율 계산기</label>
+					</div>
+					<div class="option">
+						<input type="radio" class="radio" id="calc-3" name="category" />
+						<label for="calc-3">할인금액 계산기</label>
+					</div>
+					<div class="option">
+						<input type="radio" class="radio" id="calc-4" name="category" />
+						<label for="calc-4">역할인율 계산기</label>
+					</div>
+				</div>
+				<div class="selected">
+				&bull; 계산기 선택하기
+				</div>
+			</div>
+			<!--계산기 선택하기 종료-->
+			<div class="blank-box1"></div>
+
+			<!--단위당 계산시 a-cal-->
+			<section class="a-cal on">
+				<h2 class="blind">단위당 계산기</h2>
+				<form>
+					<fieldset class="input-box clearfix">
+						<legend><img src="img/iconmonstr-check-mark-14-16.png" alt=""> 단위당 계산기</legend>
+						<ul class="clearfix">
+							<li>판매가격 :</li>
+							<li><input id="a-in1" type="number" required placeholder="*숫자입력" min="0" max="999999999" step="100"> 원</li>
+							<li>용량 :</li>
+							<li><input id="a-in2" type="number" required placeholder="*숫자입력" min="0" max="999999999" step="1"></li>
+							<li>단위선택 :</li>
+							<li>
+								<select name="unit-box" id="unit-box">
+									<option value="개">개</option>
+									<option value="매">매</option>
+									<option value="mg">mg</option>
+									<option value="g">g</option>
+									<option value="kg">kg</option>
+									<option value="ml">ml</option>
+									<option value="l">l</option>
+									<option value="mm">mm</option>
+									<option value="cm">cm</option>
+									<option value="m">m</option>
+								</select>
+							</li>
+						</ul>
+
+						<input class="field-reset" type="reset" value="초기화">
+						<div class="button" id="a-submit">계산하기</div>
+					</fieldset>
+				</form>
+				<br>
+				<fieldset class="result-box">
+					<legend><img src="img/iconmonstr-file-22-16.png" alt=""> 계산 결과</legend>
+					<div>
+						<p class="a-result1">1 개당 0 원</p>
+						<p class="a-result2">10 개당 0 원</p>
+						<p class="a-result3">100 개당 0 원</p>
+					</div>
+				</fieldset>
+				<div class="btn-box-1">
+					<button class="manual-1" id="gtm-manual" style=" border-radius: 5px; overflow: hidden; cursor: pointer; font-size: 1.3rem;"><img src="img/ico_manual.jpg" alt="" style="height: 20px; vertical-align: middle"> 사용법 안내&nbsp;</button>
+					&nbsp;
+					<button class="btn-calc" id="gtm-calc" style=" border-radius: 5px; overflow: hidden; cursor: pointer; font-size: 1.3rem;"><img src="img/ico_calc.jpg" alt="" style="height: 20px; vertical-align: middle"> 심플 계산기&nbsp;</button>
+				</div>
+			</section>
+
+			<!--할인율 계산기 b-cal-->
+			<section class="b-cal">
+				<h2 class="blind">할인율계산기</h2>
+				<form>
+					<fieldset class="input-box clearfix">
+						<legend><img src="img/iconmonstr-check-mark-14-16.png" alt=""> 할인율 계산기</legend>
+						<ul class="clearfix">
+							<li>정상가격 :</li>
+							<li><input id="b-in1" type="number" required placeholder="*숫자입력" min="0" max="999999999" step="100"> 원</li>
+							<li>할인금액 :</li>
+							<li><input id="b-in2" type="number" required placeholder="*숫자입력" min="0" max="999999999" step="100"> 원</li>
+						</ul>
+
+						<input class="field-reset" type="reset" value="초기화">
+						<div class="button" id="b-submit">계산하기</div>
+					</fieldset>
+				</form>
+				<br>
+				<fieldset class="result-box">
+					<legend><img src="img/iconmonstr-file-22-16.png" alt=""> 계산 결과</legend>
+					<div>
+						<p class="b-result1">할인율 0 &percnt;</p>
+						<p class="b-result2">최종 판매가 0 원</p>
+					</div>
+				</fieldset>
+				<div class="btn-box-2">
+					<button class="manual-2" id="gtm-manual" style=" border-radius: 5px; overflow: hidden; cursor: pointer; font-size: 1.3rem;"><img src="img/ico_manual.jpg" alt="" style="height: 20px; vertical-align: middle"> 사용법 안내&nbsp;</button>
+					&nbsp;
+					<button class="btn-calc" id="gtm-calc" style=" border-radius: 5px; overflow: hidden; cursor: pointer; font-size: 1.3rem;"><img src="img/ico_calc.jpg" alt="" style="height: 20px; vertical-align: middle"> 심플 계산기&nbsp;</button>
+				</div>
+			</section>
+
+			<!--할인금액 계산기 c-cal-->
+			<section class="c-cal">
+				<h2 class="blind">할인금액계산기</h2>
+				<form>
+					<fieldset class="input-box clearfix">
+						<legend><img src="img/iconmonstr-check-mark-14-16.png" alt=""> 할인금액 계산기</legend>
+						<ul class="clearfix">
+							<li>정상가격 :</li>
+							<li><input id="c-in1" type="number" required placeholder="*숫자입력" min="0" max="999999999" step="100"> 원</li>
+							<li>할인 :</li>
+							<li>
+								<input id="c-in2" type="number" required placeholder="*숫자입력" min="0" max="99999999" step="1">
+								<input type="radio" id="c-rd1" name="unit-r1" value="1" checked><label for="c-rd1">&percnt;</label>
+								<input type="radio" id="c-rd2" name="unit-r1" value="2"><label for="c-rd2">원</label>
+							</li>
+							<li>추가할인 :</li>
+							<li>
+								<input id="c-in3" type="number" placeholder="*숫자입력" min="0" max="99999999" step="1">
+								<input type="radio" id="c-rd3" name="unit-r2" value="1"><label for="c-rd3">&percnt;</label>
+								<input type="radio" id="c-rd4" name="unit-r2" value="2" checked><label for="c-rd4">원</label>
+							</li>
+						</ul>
+
+						<input class="field-reset" type="reset" value="초기화">
+						<div class="button" id="c-submit">계산하기</div>
+					</fieldset>
+				</form>
+				<br>
+				<fieldset class="result-box">
+					<legend><img src="img/iconmonstr-file-22-16.png" alt=""> 계산 결과</legend>
+					<div>
+						<p class="c-result1">할인금액 0 원</p>
+						<p class="c-result2">추가할인금액 0 원</p>
+						<p class="c-result3">총 할인금액 0 원</p>
+						<p class="c-result4">총 할인율 0 &percnt;</p>
+						<p class="c-result5">최종 판매가 0 원</p>
+					</div>
+				</fieldset>
+				<div class="btn-box-3">
+					<button class="manual-3" id="gtm-manual" style=" border-radius: 5px; overflow: hidden; cursor: pointer; font-size: 1.3rem;"><img src="img/ico_manual.jpg" alt="" style="height: 20px; vertical-align: middle"> 사용법 안내&nbsp;</button>
+					&nbsp;
+					<button class="btn-calc" id="gtm-calc" style=" border-radius: 5px; overflow: hidden; cursor: pointer; font-size: 1.3rem;"><img src="img/ico_calc.jpg" alt="" style="height: 20px; vertical-align: middle"> 심플 계산기&nbsp;</button>
+				</div>
+			</section>
+			
+			<!--역할인율 계산기-->
+			<section class="d-cal">
+				<h2 class="blind">역할인율계산기</h2>
+				<form>
+					<fieldset class="input-box clearfix">
+						<legend><img src="img/iconmonstr-check-mark-14-16.png" alt=""> 역할인율 계산기</legend>
+						<ul class="clearfix">
+							<li>정상가격 :</li>
+							<li><input id="d-in1" type="number" required placeholder="*숫자입력" min="0" max="999999999" step="100"> 원</li>
+							<li>할인 후 :</li>
+							<li><input id="d-in2" type="number" required placeholder="*숫자입력" min="0" max="999999999" step="100"> 원</li>
+						</ul>
+
+						<input class="field-reset" type="reset" value="초기화">
+						<div class="button" id="d-submit">계산하기</div>
+					</fieldset>
+				</form>
+				<br>
+				<fieldset class="result-box">
+					<legend><img src="img/iconmonstr-file-22-16.png" alt=""> 계산 결과</legend>
+					<div>
+						<p class="d-result1">할인율 0 &percnt;</p>
+						<p class="d-result2">할인된 금액 0 원</p>
+					</div>
+				</fieldset>
+				<div class="btn-box-4">
+					<button class="manual-4" id="gtm-manual" style=" border-radius: 5px; overflow: hidden; cursor: pointer; font-size: 1.3rem;"><img src="img/ico_manual.jpg" alt="" style="height: 20px; vertical-align: middle"> 사용법 안내&nbsp;</button>
+					&nbsp;
+					<button class="btn-calc" id="gtm-calc" style=" border-radius: 5px; overflow: hidden; cursor: pointer; font-size: 1.3rem;"><img src="img/ico_calc.jpg" alt="" style="height: 20px; vertical-align: middle"> 심플 계산기&nbsp;</button>
+				</div>
+			</section>
+		<!--메인 계산기 end-->
+		</main>
+		<br>
+				
+		<!--배너 광고 시작-->
+		<div class="banner-con">
+			<!--쿠팡검색 광고-->
+			<div class="coupang-con1">
+				<p>"지금 쿠팡에서 최저가를 검색해 보세요."</p>
+				<iframe src="https://coupa.ng/bQ4PE2" width="100%" height="44" frameborder="0" scrolling="no" referrerpolicy="unsafe-url"></iframe>
+			</div>
+			<!--쿠팡다이나믹 광고 400x140-->
+			<!-- <div class="coupang-con2">
+				<div>
+					<script src="https://ads-partners.coupang.com/g.js"></script>
+					<script>
+						new PartnersCoupang.G({
+							"id": 436565,
+							"template": "carousel",
+							"trackingCode": "AF7492075",
+							"width": "400",
+							"height": "140"
+						});
+					</script>
+				</div>
+				<div>
+					<script src="https://ads-partners.coupang.com/g.js"></script>
+					<script>
+						new PartnersCoupang.G({
+							"id": 446706,
+							"template": "carousel",
+							"trackingCode": "AF7492075",
+							"width": "400",
+							"height": "140"
+						});
+					</script>
+				</div>
+			</div> -->
+			<p class="coupas">쿠팡파트너스의 일환으로 광고 클릭시 일정액의 수수료를 제공 받을 수 있으며, 개발자에게 작은 보탬이 됩니다.</p>
+			<!-- 단락 여백 -->
+			<div class="blank-box2"></div>
+			<!-- 자체 배너 광고 -->
+			<div class="banner1">
+				<a target="_blank" href="https://smartstore.naver.com/gawimonster"><div class="banner1-linkbox"><img id="gtm-banner-gm" src="img/banner_gm_400x140.png" alt="가위몬스터배너"></div></a>
+			</div>
+			<!-- 자체 배너 광고 종료 -->
+		</div>
+		<!--외부 광고 종료-->
+
+		<!-- 오늘의 로또 번호-->
+		<div class="lotto-box">
+			<h4>이번주 대박 로또번호</h4>
+			<div id="lotto-number"></div>
+			<div id="btn-lotto"><img id="gtm-lotto" src="img/iconmonstr-redo-5-32.png" alt="로또번호생성버튼"></div>
+			<canvas id="canvas" height="50" width="292"></canvas>
+		</div>
+		<!-- 오늘의 로또 번호 종료-->
+
+		<!-- 몇번째 주차인지 시작 -->
+		<div class="today-box">
+			<p class="today-result">오늘은 2021년 2월 22일 월요일 &rarr; 2월의 4번째 주</p>
+			<p class="day-result1"> 이번 달 <b>일요일</b></p>
+			<p class="day-result2"> 이번 달 <b>수요일</b></p>
+			<br>
+			<p>&#40; 대형마트 휴무일은 일반적으로 <strong>2번째 4번째 일요일</strong> 혹은 <strong>2번째 4번째 수요일</strong> 입니다. &#41;</p>
+		</div>
+		<!-- 몇번째 주차인지 종료 -->
+		
+		<!--공지사항-->
+		<div class="notice-box">
+			<h4>공지사항</h4>
+			<P>* SSL 인증서 교체로 인해 일부 환경에서 접속이 불안정 할 수 있으니, 이점 양해 부탁 드립니다.</P>
+			<P>* 교체기간 : 2021년 4월 8일 오후 9시부터 2021년 4월 9일 오후 9시까지 예정</P>
+		</div>
+		<!--공지사항 종료-->
+		
+		<footer>
+			<input type="button" id="btn-save" value="&bull; 마트랑계산기 바로가기 만들기">
+			<address>
+				All rights reserved 2021 &copy;LABEL788<br>
+				<a href="mailto:label788.dev@gmail.com?Subject=마트랑%20계산기%20문의메일%20">email to :
+					label788.dev@gmail.com</a><br>
+				www.goodprice.kro.kr
+			</address>
+			<div class="btn-share">
+				<a href="#" onclick="javascript:window.open('http://share.naver.com/web/shareView.nhn?url='+encodeURIComponent(document.URL)+'&title='+encodeURIComponent(document.title), 'naversharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" alt="네이버공유하기"><button id="gtm-share-naver" style="margin-top: 5px; border-radius: 5px; overflow: hidden; cursor: pointer;"><img src="img/ico_naver.jpg" alt="" style="height: 20px; vertical-align: middle"> 네이버 공유&nbsp;</button></a>
+				<span>&nbsp;</span>
+				<a id="kakao-link-btn" href="javascript:sendLink()">
+					<button id="gtm-share-katalk" style="margin-top: 5px; border-radius: 5px; overflow: hidden; cursor: pointer;"><img src="img/ico_katalk.jpg" alt="" style="height: 20px; vertical-align: middle"> 카카오톡 공유&nbsp;</button>
+				</a>
+				<script type="text/javascript">
+					Kakao.init('6c8766fa6cfc6f5ab7f35fd7d4c546f4');
+					function sendLink() { Kakao.Link.sendScrap({ requestUrl: 'https://www.goodprice.kro.kr' }); }
+				</script>
+			</div>
+		</footer>
+
+		<!--모달 팝업 화면-->
+		<!--calculator code - SharryHong-->
+		<div class="ct-wrap">
+			<div class="input-boxc">
+				<div class="show-box"></div>
+				<input id="numInput" type="text" placeholder="0" readonly>
+			</div>
+			<table>
+				<tbody>
+					<tr>
+						<td colspan="2" class="col3"><button id="acBtn">AC</button></td>
+						<td><button onclick="backSpace()">&larr;</button></td>
+						<td><button class="op">/</button></td>
+					</tr>
+					<tr>
+						<td><button class="number">7</button></td>
+						<td><button class="number">8</button></td>
+						<td><button class="number">9</button></td>
+						<td><button class="op">*</button></td>
+					</tr>
+					<tr>
+						<td><button class="number">4</button></td>
+						<td><button class="number">5</button></td>
+						<td><button class="number">6</button></td>
+						<td><button class="op">-</button></td>
+					</tr>
+					<tr>
+						<td><button class="number">1</button></td>
+						<td><button class="number">2</button></td>
+						<td><button class="number">3</button></td>
+						<td><button class="op">+</button></td>
+					</tr>
+					<tr>
+						<td colspan="2" class="col2"><button class="number">0</button></td>
+						<td><button class="number">.</button></td>
+						<td><button class="op">=</button></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<script src="calculator/calculator.js"></script>
+
+		<!--팝업 : 사용법 안내-->
+		<div class="pop-manual">
+			<div onclick="history.back();" class="pop-back"></div>
+			<div onclick="history.back();" class="pop-close">
+			<img src="img/iconmonstr-x-mark-thin-24.png" alt="">
+			</div>
+			<div class="pop-cont">
+				<ul>
+					<li>&#8280; 단위당 계산기 사용법 <span>&rsaquo;</span></li>
+					<li class="slide-cont">
+						<p>1&rpar; 예를 들어 3개 1묶음 2,970원짜리 제품이 있다면,
+						</p>
+						<p>2&rpar; '판매가격' 부분에는 2970을 입력하고</p>
+						<p>3&rpar; '용량' 부분에는 3을 입력한 후</p>
+						<p>4&rpar; '단위선택' 부분에는 '개'를 선택 합니다.</p>
+						<p>5&rpar; '계산하기' 버튼을 누르세요.</p>
+						<p>6&rpar; '계산 결과' 부분에서 '1개당' 990원을 확인할 수 있습니다.</p>
+						<p>7&rpar; 계산 결과 부분의 아래쪽에 '쿠팡 검색창'을 활용하셔서 인터넷 최저가를 검색해 보세요.</p>
+					</li>
+					<li>&#8280; 할인율 계산기 사용법 <span>&rsaquo;</span></li>
+					<li class="slide-cont">
+						<p>1&rpar; 예를 들어 9,900원짜리 제품을 990원 할인해서 판매 하고 있다면,
+						</p>
+						<p>2&rpar; '정상가격' 부분에는 9900을 입력하고</p>
+						<p>3&rpar; '할인금액' 부분에는 990을 입력한 후</p>
+						<p>4&rpar; '계산하기' 버튼을 누르세요.</p>
+						<p>5&rpar; '계산 결과' 부분에서 '할인율' 10&percnt;와 '최종 판매가' 8,910원을 확인할 수 있습니다.</p>
+						<p>6&rpar; 계산 결과 부분의 아래쪽에 '쿠팡 검색창'을 활용하셔서 인터넷 최저가를 검색해 보세요.</p>
+					</li>
+					<li>&#8280; 할인금액 계산기 사용법 <span>&rsaquo;</span></li>
+					<li class="slide-cont">
+						<p>1&rpar; 예를 들어 10,000원짜리 상품을 기본 10&percnt; 할인해주고, 적립카드 보유시 할인된 금액에서 추가적으로 5&percnt; 할인해 준다면,
+						</p>
+						<p>2&rpar; '정상가격' 부분에는 10000을 입력하고</p>
+						<p>3&rpar; '할인' 부분에는 10을 입력한 후 '&percnt;' 를 선택 합니다. </p>
+						<p>4&rpar; '추가할인' 부분에는 5를 입력한 후 '&percnt;' 를 선택 합니다.</p>
+						<p>5&rpar; '계산하기' 버튼을 누르세요.</p>
+						<p>6&rpar; '계산 결과' 부분에서 '할인금액' 1,000원, '추가할인금액' 450원, '총 할인금액' 1,450원, '총 할인율' 14.5&percnt;, '최종
+							판매가' 8,550원을 확인할 수 있습니다.</p>
+						<p>7&rpar; 계산 결과 부분의 아래쪽에 '쿠팡 검색창'을 활용하셔서 인터넷 최저가를 검색해 보세요.</p>
+					</li>
+					<li>&#8280; 역할인율 계산기 사용법 <span>&rsaquo;</span></li>
+					<li class="slide-cont">
+						<p>1&rpar; 예를 들어 10,000원짜리 제품을 할인해서 8,000원에 판매 하고 있다면,
+						</p>
+						<p>2&rpar; '정상가격' 부분에는 10000을 입력하고</p>
+						<p>3&rpar; '할인 후' 부분에는 8000을 입력한 후</p>
+						<p>4&rpar; '계산하기' 버튼을 누르세요.</p>
+						<p>5&rpar; '계산 결과' 부분에서 '할인율' 20&percnt;, '할인된 금액' 2,000원을 확인할 수 있습니다.</p>
+						<p>6&rpar; 계산 결과 부분의 아래쪽에 '쿠팡 검색창'을 활용하셔서 인터넷 최저가를 검색해 보세요.</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<!--.wrap 종료-->
+</body></html>
