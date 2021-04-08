@@ -1,0 +1,9 @@
+@charset "utf-8";
+@font-face {
+	font-family: 'Gsans';
+	src: url('../font/GmarketSansTTFLight.woff') format('woff');
+	font-style: normal;
+	font-weight: 400;
+}
+
+body {font-family: 'Gsans', sans-serif;}
