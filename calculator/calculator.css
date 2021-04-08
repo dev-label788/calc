@@ -1,0 +1,126 @@
+/*
+  <!--calculator code - SharryHong-->
+  <!--Thank you for your work.-->
+*/
+
+input[id="numInput"]::-webkit-input-placeholder { /* 크롬 4–56 */
+  color: #ccc;
+	font-size: 50px;
+}
+input[id="numInput"]:-moz-placeholder { /* 파이어폭스 4–18 */
+  color: #ccc;
+  opacity:  1;
+	font-size: 50px;
+}
+input[id="numInput"]::-moz-placeholder { /* 파이어폭스 19–50 */
+  color: #ccc;
+  opacity:  1;
+	font-size: 50px;
+}
+input[id="numInput"]:-ms-input-placeholder { /* 인터넷 익스플로러 10+ */
+  color:  #ccc;
+	font-size: 50px;
+}
+input[id="numInput"]::placeholder { /* 파이어폭스 51+, 크롬 57+ */
+  color: #ccc;
+  opacity:  1;
+	font-size: 50px;
+}
+
+.ct-wrap table, .ct-wrap tbody, .ct-wrap tr, .ct-wrap td, .ct-wrap button {
+  margin: 0;
+  padding: 0;
+	border-right:none;
+  border-left:none;
+  border-top:none;
+  border-bottom:none;
+/*	border-collapse: separate;
+	border-spacing: 2px;*/
+}
+.ct-wrap .input-boxc,
+.ct-wrap table,
+.ct-wrap tbody {
+	width: 100%;
+}
+.ct-wrap tr {
+	width: 100%;
+}
+.ct-wrap td {
+	width: 25%;
+}
+.ct-wrap {
+  width: 400px; /*계산기 전체 폭*/
+  margin: 50px auto 0 auto;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2), 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.ct-wrap button {
+  width: 100%;
+  height: 80px;
+  font-size: 40px;
+  color: #333;
+  border: 1px solid #bbb;
+  cursor: pointer;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.input-boxc {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #555;
+}
+.show-box {
+  color: #aaa;
+  text-align: right;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#numInput {
+  position: absolute;
+  left: 7px;
+  bottom: 5px;
+  display: inline-block;
+  padding: 3px;
+  width: 94%;
+  height: 60px;
+  color: #fff;
+  text-align: right;
+  font-size: 50px;
+  box-sizing: border-box;
+  border: none;
+  background-color: #555;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+button.number {
+  background-color: #efefef;
+}
+button.number:hover {
+  background: #ddd;
+}
+button.number:active {
+  background-color: #ccc;
+}
+button.op {
+  background-color: #FF9B22;
+}
+button.op:hover {
+  background-color: #f99112;
+}
+button.op:active {
+  background-color: #EB7016;
+}
+/* 클리어버튼과 0버튼 크기 설정
+.col2 button {
+	width: 201px;
+}
+.col3 button {
+	width: 303px;
+}
+*/
