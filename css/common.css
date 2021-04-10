@@ -402,7 +402,7 @@ main section .result-box p:not(:last-child) {
 
 main [class ^= "btn-box"] {
 	text-align: right;
-	padding: 5px 15px;
+	padding: 5px 14px;
 	color: #ffffff;
 	background: #2f3640;;
 	border-radius: 0 0 5px 5px;
@@ -506,7 +506,7 @@ main .c-cal .result-box p:nth-child(n+3) {
 }
 .lotto-box h4 {
 	border-radius: 5px 5px 0 0;
-	padding: 5px 15px;
+	padding: 6px 14px;
 	background: #2f3640;
 	color: #fff;
 }
@@ -567,7 +567,7 @@ font-size: 1rem;
 /*오늘날짜*/
 .today-box {
 	margin-top: 20px;
-	padding: 13px;
+	padding: 10px 14px;
 	border-radius: 5px;
 	background: #2f3640;
 	color: #fff;
@@ -576,7 +576,7 @@ font-size: 1rem;
 .today-box p {
 	text-align: center;
 	font-size: 1.4rem;
-	line-height: 1.4rem;
+	line-height: 2.0rem;
 }
 
 .today-box .today-result {
@@ -602,7 +602,7 @@ footer {
 	background: #1e3932;
 	color: #fff;
 	font-size: 1.4rem;
-	padding: 10px 13px;
+	padding: 10px 14px;
 }
 
 footer #btn-save {
