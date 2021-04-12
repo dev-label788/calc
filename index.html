@@ -102,7 +102,7 @@
 	<!-- 서비스 워커를 등록 -->
 	<script>
 		if ('serviceWorker' in navigator) {
-			navigator.serviceWorker.register('/js/iconsw.js')
+			navigator.serviceWorker.register('iconsw.js')
 				.then((reg) => {
 					console.log('서비스 워커가 등록됨.', reg);
 				});
