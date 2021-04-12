@@ -352,12 +352,23 @@ $(function () {
 		thisDate = new Date(thisYear + '-' + thisMonth + '-' + dNum);
 		thisDay = thisDate.getDay();
 		if (thisDay == 0) {
-			$('.day-result1').append('<span> / ' + seqNumSun + '번째 <b>' + dNum + '</b>일 ')
+			if (seqNumSun == 1) {
+				$('.day-result1').append(seqNumSun + '번째(일) <b>' + dNum + '일</b> ')
 			seqNumSun++;
+			} else {
+				$('.day-result1').append(' / ' + seqNumSun + '번째(일) <b>' + dNum + '일</b> ')
+			seqNumSun++;
+			}
+			
 		}
 		if (thisDay == 3) {
-			$('.day-result2').append('<span> / ' + seqNumWed + '번째 <b>' + dNum + '</b>일 ')
+			if (seqNumWed == 1) {
+				$('.day-result2').append(seqNumWed + '번째(수) <b>' + dNum + '일</b> ')
 			seqNumWed++;
+			} else {
+				$('.day-result2').append(' / ' + seqNumWed + '번째(수) <b>' + dNum + '일</b> ')
+			seqNumWed++;
+			}
 		}
 	}
 	/*1번째 부터 시작하는 수요일과 일요일 표시 종료*/
