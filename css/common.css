@@ -428,6 +428,7 @@ main .c-cal .result-box p:nth-child(n+3) {
 /*쿠팡광고*/
 .banner-con .coupang-con1 {
 	margin-top: 20px;
+	padding: 0 14px;
 }
 
 .banner-con .coupang-con1 p {
@@ -561,13 +562,13 @@ font-size: 1rem;
 }
 .lotto-box #canvas {
 	display: block;
-	margin: 6px auto;
+	margin: 10px auto 12px;
 }
 
 /*오늘날짜*/
 .today-box {
 	margin-top: 20px;
-	padding: 10px 14px;
+	padding: 14px 14px;
 	border-radius: 5px;
 	background: #2f3640;
 	color: #fff;
@@ -578,11 +579,11 @@ font-size: 1rem;
 	font-size: 1.4rem;
 	line-height: 2.0rem;
 }
-
+.today-box .today-box-br {height: 10px;}
 .today-box .today-result {
-	margin-bottom: 10px;
 	font-weight: bold;
 }
+.today-box .day-result-month {text-decoration: underline;}
 
 /*빈줄표시2*/
 .blank-box2 {
