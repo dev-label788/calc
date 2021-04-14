@@ -240,7 +240,7 @@ $(function () {
 		var result = comma(eSum2);
 		$eResult4.html('양념+고기 100g당 <span>' + result + '</span> 원');
 		var result = comma(eSum3);
-		$eResult5.html('<b>순수고기</b> 100g당 <span>' + result + '</span> 원');
+		$eResult5.html('<b>고기</b>만 100g당 <span>' + result + '</span> 원');
 	});
 	
 	/*3자리 콤마*/
