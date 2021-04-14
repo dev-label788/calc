@@ -600,9 +600,10 @@ font-size: 1rem;
 }
 
 /*공지사항*/
-	.notice-box {display: none; border: 1px solid #2f3640; width: 100%; border-radius: 5px; padding: 20px 10px; margin-top: 20px; text-align: center; box-sizing: border-box;}
-	.notice-box h4 {line-height: 30px;}
-	.notice-box p {line-height: 20px; font-size: 1.4rem;}
+	.notice-box {display: block; color: #2f3640; width: 100%; margin-top: 20px; text-align: center; box-sizing: border-box;}
+	.notice-box h4 {line-height: 28px; background: #2f3640; color: #fff; border-radius: 5px 5px 0 0;}
+	.notice-box div {line-height: 28px; border: 1px solid #2f3640; border-radius: 0 0 5px 5px; padding: 14px;}
+	.notice-box p {line-height: 20px; font-size: 1.4rem; text-align: justify;}
 
 /*푸터*/
 footer {
