@@ -60,6 +60,10 @@ $(function () {
 				$calCu.removeClass('on');
 				$calCu.eq(3).addClass('on');
 				return;
+			} else if (calcSel == 'calc-5') {
+				$calCu.removeClass('on');
+				$calCu.eq(4).addClass('on');
+				return;
 			} else {
 				$calCu.removeClass('on');
 				$calCu.eq(0).addClass('on');
@@ -202,6 +206,43 @@ $(function () {
 		$dResult2.html('할인된 금액 <span>' + result + '</span> 원');
 	});
 	
+	/*e-cal*/
+	var $eCal = $('.e-cal'),
+		$eResult1 = $eCal.find('.e-result1'),
+		$eResult2 = $eCal.find('.e-result2'),
+		$eResult3 = $eCal.find('.e-result3'),
+		$eResult4 = $eCal.find('.e-result4'),
+		$eResult5 = $eCal.find('.e-result5'),
+		$eSubmit = $eCal.find('#e-submit');
+
+	$eSubmit.on('click', function () {
+		var eInput1 = Number($eCal.find('#e-in1').val()),
+			eInput1rd = $eCal.find('input[name="unit-er1"]:checked').val(),
+			eInput2 = Number($eCal.find('#e-in2').val()),
+			eInput3 = Number($eCal.find('#e-in3').val()),
+			eSum1 = 0; //고기중량
+			if (eInput1rd == 2) {
+			eInput1 = eInput1 * 1000
+			eSum1 = Math.round(eInput1 * eInput2 / 100 * 100) / 100;
+		} else {
+			eSum1 = Math.round(eInput1 * eInput2 / 100 * 100) / 100;
+		}
+		
+		var	eSum2 = Math.round(eInput3/eInput1*100 * 100) / 100, //양념+고기 100g 당
+				eSum3 = Math.round(eInput3/eSum1*100 * 100) / 100; //real고기 100g 당
+				
+		var result = comma(eInput1);
+		$eResult1.html('전체무게 <span>' + result + 'g</span> 중');
+		var result = comma((eInput1-eSum1));
+		$eResult2.html('양념무게 <span>' + result + 'g</span> &lpar;' + (100 - eInput2) + '&percnt;&rpar;');
+		var result = comma(eSum1);
+		$eResult3.html('<b>고기무게</b> <span>' + result + 'g</span> &lpar;' + eInput2 + '&percnt;&rpar;');
+		var result = comma(eSum2);
+		$eResult4.html('양념+고기 100g당 <span>' + result + '</span> 원');
+		var result = comma(eSum3);
+		$eResult5.html('<b>순수고기</b> 100g당 <span>' + result + '</span> 원');
+	});
+	
 	/*3자리 콤마*/
 	function comma(numb) {
 		var money = numb.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -218,6 +259,7 @@ $(function () {
 		$popM2 = $('.manual-2'),
 		$popM3 = $('.manual-3'),
 		$popM4 = $('.manual-4');
+		$popM5 = $('.manual-5');
 
 	$popMn.hide();
 
@@ -225,6 +267,7 @@ $(function () {
 	$popList.eq(3).hide();
 	$popList.eq(5).hide();
 	$popList.eq(7).hide();
+	$popList.eq(9).hide();
 
 	/*팝업 띄우기전 메뉴얼 선택*/
 	/*a-cal에서 선택*/
@@ -232,9 +275,6 @@ $(function () {
 		$popMn.fadeIn(200);
 		$popSlide.stop().slideUp();
 		$popList.eq(1).stop().slideDown();
-		setTimeout(function () {
-			$popList.eq(6).css('border-radius', '0 0 5px 5px');
-		}, 380);
 		$('html, body').stop().animate({
 			scrollTop: 0
 		}, 100);
@@ -245,9 +285,6 @@ $(function () {
 		$popMn.fadeIn(200);
 		$popSlide.stop().slideUp();
 		$popList.eq(3).stop().slideDown();
-		setTimeout(function () {
-			$popList.eq(6).css('border-radius', '0 0 5px 5px');
-		}, 380);
 		$('html, body').stop().animate({
 			scrollTop: 0
 		}, 100);
@@ -258,7 +295,6 @@ $(function () {
 		$popMn.fadeIn(200);
 		$popSlide.stop().slideUp();
 		$popList.eq(5).stop().slideDown();
-		$popList.eq(6).css('border-radius', 0);
 		$('html, body').stop().animate({
 			scrollTop: 0
 		}, 100);
@@ -269,7 +305,16 @@ $(function () {
 		$popMn.fadeIn(200);
 		$popSlide.stop().slideUp();
 		$popList.eq(7).stop().slideDown();
-		$popList.eq(6).css('border-radius', 0);
+		$('html, body').stop().animate({
+			scrollTop: 0
+		}, 100);
+		window.location.hash = "#open";
+	});
+	/*e-cal에서 선택*/
+	$popM5.on('click', function () {
+		$popMn.fadeIn(200);
+		$popSlide.stop().slideUp();
+		$popList.eq(9).stop().slideDown();
 		$('html, body').stop().animate({
 			scrollTop: 0
 		}, 100);
@@ -281,28 +326,22 @@ $(function () {
 			case 0:
 				$popSlide.stop().slideUp();
 				$popList.eq(1).stop().slideDown();
-				setTimeout(function () {
-					$popList.eq(6).css('border-radius', '0 0 5px 5px');
-				}, 380);
 				break;
 			case 2:
 				$popSlide.stop().slideUp();
 				$popList.eq(3).stop().slideDown();
-				setTimeout(function () {
-					$popList.eq(6).css('border-radius', '0 0 5px 5px');
-				}, 380);
 				break;
 			case 4:
 				$popSlide.stop().slideUp();
 				$popList.eq(5).stop().slideDown();
-				setTimeout(function () {
-					$popList.eq(6).css('border-radius', '0 0 5px 5px');
-				}, 380);
 				break;	
 			case 6:
 				$popSlide.stop().slideUp();
 				$popList.eq(7).stop().slideDown();
-				$popList.eq(6).css('border-radius', 0);
+				break;
+			case 8:
+				$popSlide.stop().slideUp();
+				$popList.eq(9).stop().slideDown();
 				break;
 		}
 	});
