@@ -5,7 +5,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="naver-site-verification" content="65a47e7fc6ad72cbceb4efe2725b606ed308414e">
 	<meta name="description" content="묶음 상품 단가 계산할때, 상품 할인율 및 할인금액 계산할땐 마트랑계산기를 사용 하세요.">
   <meta name="theme-color" content="#1e3932">
 	<meta property="og:title" content="마트랑계산기 - 마트갈때 필수품">
@@ -14,6 +13,7 @@
 	<meta property="og:url" content="https://www.goodprice.kro.kr?utm_source=og&utm_medium=ogurl">
 	<meta property="og:type" content="website">
 	<link rel="canonical" href="https://www.goodprice.kro.kr/index.html">
+	<meta name="naver-site-verification" content="65a47e7fc6ad72cbceb4efe2725b606ed308414e">
 
 	<!-- Google Tag Manager -->
 	<script>
@@ -202,6 +202,10 @@
 						<input type="radio" class="radio" id="calc-4" name="category" />
 						<label for="calc-4">역할인율 계산기</label>
 					</div>
+					<div class="option">
+						<input type="radio" class="radio" id="calc-4" name="category" />
+						<label for="calc-5">양념고기 계산기</label>
+					</div>
 				</div>
 				<div class="selected">
 				&bull; 계산기 선택하기
@@ -260,7 +264,7 @@
 
 			<!--할인율 계산기 b-cal-->
 			<section class="b-cal">
-				<h2 class="blind">할인율계산기</h2>
+				<h2 class="blind">할인율 계산기</h2>
 				<form>
 					<fieldset class="input-box clearfix">
 						<legend><img src="img/iconmonstr-check-mark-14-16.png" alt=""> 할인율 계산기</legend>
@@ -292,7 +296,7 @@
 
 			<!--할인금액 계산기 c-cal-->
 			<section class="c-cal">
-				<h2 class="blind">할인금액계산기</h2>
+				<h2 class="blind">할인금액 계산기</h2>
 				<form>
 					<fieldset class="input-box clearfix">
 						<legend><img src="img/iconmonstr-check-mark-14-16.png" alt=""> 할인금액 계산기</legend>
@@ -335,9 +339,9 @@
 				</div>
 			</section>
 			
-			<!--역할인율 계산기-->
+			<!--역할인율 계산기 d-cal-->
 			<section class="d-cal">
-				<h2 class="blind">역할인율계산기</h2>
+				<h2 class="blind">역할인율 계산기</h2>
 				<form>
 					<fieldset class="input-box clearfix">
 						<legend><img src="img/iconmonstr-check-mark-14-16.png" alt=""> 역할인율 계산기</legend>
@@ -366,12 +370,54 @@
 					<button class="btn-calc" id="gtm-calc" style=" border-radius: 5px; overflow: hidden; cursor: pointer; font-size: 1.4rem;"><img src="img/ico_calc.jpg" alt="" style="height: 20px; vertical-align: middle"> 심플 계산기&nbsp;</button>
 				</div>
 			</section>
+			
+			<!--고기중량 계산기 e-cal-->
+			<section class="e-cal">
+				<h2 class="blind">고기중량 계산기</h2>
+				<form>
+					<fieldset class="input-box clearfix">
+						<legend><img src="img/iconmonstr-check-mark-14-16.png" alt=""> 고기중량 계산기</legend>
+						<ul class="clearfix">
+							<li>전체무게 :</li>
+							<li>
+								<input id="e-in1" type="number" required placeholder="*숫자입력" min="0" max="99999999" step="1">
+								<input type="radio" id="e-rd1" name="unit-er1" value="1" checked><label for="e-rd1">g</label>
+								<input type="radio" id="e-rd2" name="unit-er1" value="2"><label for="e-rd2">Kg</label>
+							</li>
+							<li>고기비율 :</li>
+							<li><input id="e-in2" type="number" required placeholder="*숫자입력" min="0" max="100" step="0.1"> &percnt;</li>
+							<li>판매가격 :</li>
+							<li><input id="e-in3" type="number" required placeholder="*숫자입력" min="0" max="999999999" step="100"> 원</li>
+						</ul>
+
+						<input class="field-reset" type="reset" value="초기화">
+						<div class="button" id="e-submit">계산하기</div>
+					</fieldset>
+				</form>
+				<br>
+				<fieldset class="result-box">
+					<legend><img src="img/iconmonstr-file-22-16.png" alt=""> 계산 결과</legend>
+					<div>
+						<p class="e-result1">전체무게 0g 중</p>
+						<p class="e-result2">양념무게 0g(0&percnt;)</p>
+						<p class="e-result3"><b>고기무게</b> 0g(0&percnt;)</p>
+						<p class="e-result4">양념+고기 100g 당 0 원</p>
+						<p class="e-result5"><b>순수고기</b> 100g 당 0 원</p>
+					</div>
+				</fieldset>
+				<div class="btn-box-5">
+					<button class="manual-5" id="gtm-manual" style=" border-radius: 5px; overflow: hidden; cursor: pointer; font-size: 1.4rem;"><img src="img/ico_manual.jpg" alt="" style="height: 20px; vertical-align: middle"> 사용법 안내&nbsp;</button>
+					&nbsp;
+					<button class="btn-calc" id="gtm-calc" style=" border-radius: 5px; overflow: hidden; cursor: pointer; font-size: 1.4rem;"><img src="img/ico_calc.jpg" alt="" style="height: 20px; vertical-align: middle"> 심플 계산기&nbsp;</button>
+				</div>
+			</section>
+			
 		<!--메인 계산기 end-->
 		</main>
 		<br>
 				
 		<!--배너 광고 시작-->
-		<div class="banner-con">
+		<div class="banner-box">
 			<!--쿠팡검색 광고-->
 			<div class="coupang-con1">
 				<p>"지금 쿠팡에서 최저가를 검색해 보세요."</p>
@@ -385,7 +431,8 @@
 			<!-- 쿠팡 배너 광고 -->
 			<div class="banner2">
 					<!--300size img-->
-					<a href="https://coupa.ng/bVNGwc" target="_blank" id="gtm-cp-rocket"><img src="img/banner_cp_img1.png" alt="쿠팡로켓배송">			
+					<a href="https://coupa.ng/bVNGwc" target="_blank" id="gtm-cp-rocket">
+					<div class="banner-imgbox"><img src="img/banner/banner_cp_img1.png" alt="쿠팡로켓배송"></div>			
 					</a>
 			</div>
 			<p class="coupas">파트너스 활동을 통해 일정액의 수수료를 제공받을 수 있음</p>
@@ -395,12 +442,16 @@
 			
 			<!-- 자체 배너 광고 -->
 			<div class="banner1">
-				<a target="_blank" href="https://smartstore.naver.com/gawimonster" id="gtm-banner-gm"><div class="banner1-linkbox"><img src="img/banner_gm_400x140.png" alt="가위몬스터배너"></div></a>
+				<a target="_blank" href="https://smartstore.naver.com/gawimonster" id="gtm-banner-gm"><div class="banner-imgbox"><img src="img/banner/banner_gm_400x140.png" alt="가위몬스터배너"></div></a>
+			</div>
+			<!-- 단락 여백 -->
+			<div class="blank-box2"></div>
+			<div class="banner3">
+				<a target="_blank" href="https://www.boxoffice.kro.kr/" id="gtm-banner-mp"><div class="banner-linkbox"><img src="img/banner/banner_mp_400x140.png" alt="가위몬스터배너"></div></a>
 			</div>
 			<!-- 단락 여백 -->
 			<div class="blank-box2"></div>
 			<!-- 자체 배너 광고 종료 -->
-			
 		</div>
 		<!--외부 광고 종료-->
 
@@ -518,7 +569,7 @@
 					</li>
 					<li>&#8280; 할인율 계산기 사용법 <span>&rsaquo;</span></li>
 					<li class="slide-cont">
-						<p>1&rpar; 예를 들어 9,900원짜리 제품을 990원 할인해서 판매 하고 있다면,
+						<p>1&rpar; 예를 들어 9,900원짜리 제품을 990원 할인해서 판매하고 있다면,
 						</p>
 						<p>2&rpar; '정상가격' 부분에는 9900을 입력하고</p>
 						<p>3&rpar; '할인금액' 부분에는 990을 입력한 후</p>
@@ -540,7 +591,7 @@
 					</li>
 					<li>&#8280; 역할인율 계산기 사용법 <span>&rsaquo;</span></li>
 					<li class="slide-cont">
-						<p>1&rpar; 예를 들어 10,000원짜리 제품을 할인해서 8,000원에 판매 하고 있다면,
+						<p>1&rpar; 예를 들어 10,000원짜리 제품을 할인해서 8,000원에 판매하고 있다면,
 						</p>
 						<p>2&rpar; '정상가격' 부분에는 10000을 입력하고</p>
 						<p>3&rpar; '할인 후' 부분에는 8000을 입력한 후</p>
@@ -548,7 +599,19 @@
 						<p>5&rpar; '계산 결과' 부분에서 '할인율' 20&percnt;, '할인된 금액' 2,000원을 확인할 수 있습니다.</p>
 						<p>6&rpar; 계산 결과 부분의 아래쪽에 '쿠팡 검색창'을 활용하셔서 인터넷 최저가를 검색해 보세요.</p>
 					</li>
+					<li>&#8280; 고기중량 계산기 사용법 <span>&rsaquo;</span></li>
+					<li class="slide-cont">
+						<p>1&rpar; 예를 들어 '소양념본갈비 특대4Kg'을 345,000원에 판매하고 있다면
+						</p>
+						<p>2&rpar; '전체무게' 부분에 4를 입력한 후 Kg버튼을 선택하고</p>
+						<p>3&rpar; '고기비율' 부분에는 제품 택의 표기사항 중 원재료명의 소갈비 비율&percnt;를 확인하여 60을 입력한 후</p>
+						<p>4&rpar; '판매가격' 부분에는 345000을 입력하고</p>
+						<p>5&rpar; '계산하기' 버튼을 누르세요.</p>
+						<p>6&rpar; '계산 결과' 부분에서 '전체무게' 4,000g, '양념무게' 1,600g&lpar;40%&rpar;, '고기무게' 2,400g&lpar;60%&rpar;, '양념+고기 100g당' 8,625원, '순수고기 100g당' 14,375원을 확인할 수 있습니다.</p>
+						<p>7&rpar; 계산 결과 부분의 아래쪽에 '쿠팡 검색창'을 활용하셔서 인터넷 최저가를 검색해 보세요.</p>
+					</li>
 				</ul>
+				<div class="pop-con-text">현명한 소비활동의 첫걸음 마트랑 계산기</div>
 			</div>
 		</div>
 
