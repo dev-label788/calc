@@ -393,7 +393,8 @@ main section .result-box span {
 
 main section .result-box p {
 	text-align: center;
-	font-size: 2.6rem;
+	font-size: 2.2rem;
+	line-height: 2.2rem;
 }
 
 main section .result-box p:not(:last-child) {
@@ -422,67 +423,50 @@ main .c-cal .result-box p:nth-child(n+3) {
 }
 
 /*배너광고*/
-.banner-con {
+.banner-box {
 	text-align: center;
 }
 /*쿠팡광고*/
-.banner-con .coupang-con1 {
+.banner-box .coupang-con1 {
 	margin-top: 20px;
 	padding: 0 14px;
 }
 
-.banner-con .coupang-con1 p {
+.banner-box .coupang-con1 p {
 	font-weight: bold;
 	margin-bottom: 20px;
 }
 
-.banner-con .coupang-con2 {
+.banner-box .coupang-con2 {
 	margin-top: 30px;
 	font-size: 0;
 }
 
-.banner-con .coupang-con2 div {
+.banner-box .coupang-con2 div {
 	display: inline-block;
 }
 
-.banner-con .coupang-con3 {
+.banner-box .coupang-con3 {
 	margin-top: 30px;
 	font-size: 0;
 }
 
-.banner-con .coupang-con3 a {
+.banner-box .coupang-con3 a {
 	display: inline-block;
 	margin-bottom: 10px;
 }
 
 /*쿠파스 문구 : 폰트크기*/
-.banner-con .coupas {
+.banner-box .coupas {
 	margin-top: 3px;
 	padding: 0 13px;
 	font-size: 1.2rem;
 	color: #777;
 }
 
-/*자체 배너 광고*/
-.banner-con .banner1 {
-	width: 100%;
-	border-radius: 5px;
-	margin: auto;
-	background: url(../img/banner_gm_800x140.png) repeat 0% 100%;
-	overflow: hidden;
-}
-.banner-con .banner1 .banner1-linkbox {
-	width: 100%;
-}
-.banner-con .banner1 img {
-	display: block;
-	margin: auto;
-}
-
 /*쿠팡 배너 광고*/
-.banner-con .banner2 {
+.banner-box .banner2 {
 	width: 100%;
-	height: 140px;
 	font-size: 0;
 	margin-top: 20px;
 	overflow: hidden;
@@ -492,12 +476,33 @@ main .c-cal .result-box p:nth-child(n+3) {
 	background: linear-gradient(180deg, #0b0028, #050b47, #003799);
 }
 
-.banner-con .banner2 a {display: block; line-height: 140px;}
+.banner-box .banner2 a {display: block; line-height: 140px;}
 
-.banner-con .banner2 img {
+
+
+/*자체 배너 광고*/
+.banner-box .banner1 {
 	width: 100%;
-	max-width: 300px;
-	vertical-align: middle;
+	border-radius: 5px;
+	margin: auto;
+	background: url(../img/banner/banner_gm_800x140.png) repeat 0% 100%;
+	overflow: hidden;
+}
+.banner-box .banner3 {
+	width: 100%;
+	border-radius: 5px;
+	margin: auto;
+	overflow: hidden;
+	background-size: auto auto;
+	background-color: rgba(255, 234, 216, 1);
+	background-image: repeating-linear-gradient(135deg, transparent, transparent 10px, rgba(255, 223, 195, 1) 10px, rgba(255, 223, 195, 1) 20px );
+}
+.banner-box .banner-imgbox {
+	width: 100%;
+}
+.banner-box [class^="banner"] img {
+	display: block;
+	margin: auto;
 }
 
 /*로또번호*/
@@ -638,12 +643,12 @@ footer address {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: #1e3932;
+	background: rgba(30, 57, 50, 0.9);
 	width: 100%;
 	height: 100%;
 	z-index: 3
 }
-
+/*header.on, main.on, footer.on, div[class$="-box"].on {filter: blur(5px);}*/
 .pop-manual .pop-back {
 	position: absolute;
 	top: 0;
@@ -654,25 +659,32 @@ footer address {
 
 .pop-manual .pop-cont {
 	position: relative;
-	width: 800px;
+	max-width: 800px;
+	width: 96%;
 	margin: auto;
-	margin-top: 10px;
+	margin-top: 50px;
 	margin-bottom: 50px;
+	padding: 20px;
 	border-radius: 5px;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.7) 2px 2px 10px;
 	-moz-box-shadow: rgba(0, 0, 0, 0.7) 2px 2px 10px;
 	box-shadow: rgba(0, 0, 0, 0.7) 2px 2px 10px;
+	background: #fff;
 }
 
 .pop-manual .pop-close {
 	position: absolute;
 	top: 2px;
 	right: 12px;
+	background: #1e3932;
+	height: 24px;
+	padding: 1px;
 	cursor: pointer;
 }
 
 .pop-manual .pop-cont ul {
-	margin-top: 50px;
+	background: #fff;
+	color: #2f3640;
 }
 
 .pop-manual .pop-cont ul li {
@@ -705,60 +717,32 @@ footer address {
 }
 
 .pop-manual .pop-cont ul li:nth-child(odd) {
-	height: 100px;
-	line-height: 100px;
+	height: 40px;
+	line-height: 40px;
 	cursor: pointer;
+	background-image: linear-gradient(160deg, #a54e07, #b47e11, #fef1a2, #bc881b, #a54e07);
+	box-shadow: 0 3px 6px rgba(0, 0, 0, .16),
+		0 3px 6px rgba(110, 80, 20, .4),
+		inset 0 -2px 5px 1px rgba(139, 66, 8, 1),
+		inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+	border-radius: 5px;
+	color: #fff;
+	text-shadow: 1px 1px 3px #1e3932, -1px -1px 2px #1e3932;
 }
 
 .pop-manual .pop-cont ul li:nth-child(even) {
+	padding-top: 20px;
 	padding-bottom: 20px;
 }
 
-.pop-manual .pop-cont ul li:nth-child(1) {
-	border-radius: 5px 5px 0 0;
-}
-
-.pop-manual .pop-cont ul li:nth-child(7),
-.pop-manual .pop-cont ul li:nth-child(8) {
-	border-radius: 0 0 5px 5px;
-}
-
-.pop-manual .pop-cont ul li:nth-child(1),
-.pop-manual .pop-cont ul li:nth-child(2) {
-	/*	background: #e8cb63;*/
-	background: linear-gradient(315deg, #24e2c4 0%, #60bee1 100%);
+.pop-manual .pop-con-text {
+	background: #2f3640;
 	color: #fff;
-}
-
-.pop-manual .pop-cont ul li:nth-child(3),
-.pop-manual .pop-cont ul li:nth-child(4) {
-	/*	background: #e97c5a;*/
-	background: linear-gradient(315deg, #24e2c4 0%, #60bee1 100%);
-	color: #fff;
-}
-
-.pop-manual .pop-cont ul li:nth-child(5),
-.pop-manual .pop-cont ul li:nth-child(6) {
-	/*	background: #973a51;*/
-	background: linear-gradient(315deg, #24e2c4 0%, #60bee1 100%);
-	/*	color: #4f3156;*/
-	color: #fff;
-}
-
-.pop-manual .pop-cont ul li:nth-child(7),
-.pop-manual .pop-cont ul li:nth-child(8) {
-	/*	background: #973a51;*/
-	background: linear-gradient(315deg, #24e2c4 0%, #60bee1 100%);
-	/*	color: #4f3156;*/
-	color: #fff;
-}
-
-.pop-manual .pop-cont ul li:nth-child(3),
-.pop-manual .pop-cont ul li:nth-child(5),
-.pop-manual .pop-cont ul li:nth-child(7) {
-	-webkit-box-shadow: inset 0px 3px 1px rgba(68, 68, 68, 0.3);
-	-moz-box-shadow: inset 0px 3px 1px rgba(68, 68, 68, 0.3);
-	box-shadow: inset 0px 3px 1px rgba(68, 68, 68, 0.3);
+	text-align: center;
+	margin-top: 10px;
+	padding: 10px;
+	font-weight: bold;
+	border-radius: 5px;
 }
 
 /*미디어쿼리 시작*/
@@ -828,7 +812,7 @@ footer address {
 		font-size: 1.4rem;
 	}
 
-	.banner-con .coupang-con2 {
+	.banner-box .coupang-con2 {
 		width: 100%;
 		overflow: hidden;
 	}
@@ -888,25 +872,27 @@ footer address {
 		width: 100px;
 	}
 
-	main .c-cal label {
+	main .c-cal label,
+	main .e-cal label {
 		font-size: 1.0rem;
 	}
 
 	main section .result-box p {
 		font-size: 1.8rem;
+		line-height: 1.8rem;
 	}
 
-	.banner-con .coupang-con2 {
+	.banner-box .coupang-con2 {
 		width: 100%;
 		overflow: hidden;
 	}
 
-	.banner-con .coupang-con3 {
+	.banner-box .coupang-con3 {
 		width: 100%;
 		overflow: hidden;
 	}
 	
-	.banner-con .banner1 img {
+	.banner-box [class^="banner"] img {
 		width: 100%;
 	}
 		
