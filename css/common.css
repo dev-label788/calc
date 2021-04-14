@@ -569,7 +569,11 @@ font-size: 1rem;
 	display: block;
 	margin: 10px auto 12px;
 }
-
+.lotto-box p {
+	padding: 1px 14px 14px;
+	font-size: 1.4rem;
+	color: #2f3640;
+}
 /*오늘날짜*/
 .today-box {
 	margin-top: 20px;
