@@ -30,7 +30,12 @@ $(function () {
 			$popMn.hide();
 		}
 	};
-
+	
+	/*form reset 버튼*/
+	$('.input-reset-btn').on('click', function(){
+		$(this).prev().val('');
+	});
+	/*form reset 버튼 end*/
 
 	/*계산기 선택하기*/
 	var selected = $('.selected');
@@ -141,8 +146,8 @@ $(function () {
 		var cInput1 = Number($cCal.find('#c-in1').val()),
 			cInput2 = Number($cCal.find('#c-in2').val()),
 			cInput3 = Number($cCal.find('#c-in3').val()),
-			unitR1 = $cCal.find('input[name="unit-r1"]:checked').val(),
-			unitR2 = $cCal.find('input[name="unit-r2"]:checked').val(),
+			unitR1 = $cCal.find('#c-unit1 option:selected').val(),
+			unitR2 = $cCal.find('#c-unit2 option:selected').val(),
 			cDcsum = 0,
 			cSubdc = 0,
 			cSum1 = 0,
@@ -174,9 +179,9 @@ $(function () {
 		cSum3 = Math.round((cInput1 - cSum1) * 100) / 100;
 
 		var result = comma(cDcsum);
-		$cResult1.html('할인금액 <span>' + result + '</span> 원');
+		$cResult1.html('선 할인금액 <span>' + result + '</span> 원');
 		result = comma(cSubdc);
-		$cResult2.html('추가할인금액 <span>' + result + '</span> 원');
+		$cResult2.html('추가 할인금액 <span>' + result + '</span> 원');
 		result = comma(cSum1);
 		$cResult3.html('총 할인금액 <span>' + result + '</span> 원');
 		$cResult4.html('총 할인율 <span>' + cSum2 + '</span> &percnt;');
@@ -203,7 +208,7 @@ $(function () {
 		var result = comma(dSum1);
 		$dResult1.html('할인율 <span>' + result + '</span> &percnt;');
 		var result = comma(dSum2);
-		$dResult2.html('할인된 금액 <span>' + result + '</span> 원');
+		$dResult2.html('할인받은 금액 <span>' + result + '</span> 원');
 	});
 	
 	/*e-cal*/
@@ -217,7 +222,7 @@ $(function () {
 
 	$eSubmit.on('click', function () {
 		var eInput1 = Number($eCal.find('#e-in1').val()),
-			eInput1rd = $eCal.find('input[name="unit-er1"]:checked').val(),
+			eInput1rd = $eCal.find('#e-unit1 option:selected').val(),
 			eInput2 = Number($eCal.find('#e-in2').val()),
 			eInput3 = Number($eCal.find('#e-in3').val()),
 			eSum1 = 0; //고기중량
@@ -411,7 +416,7 @@ $(function () {
 		}
 	}
 	/*1번째 부터 시작하는 수요일과 일요일 표시 종료*/
-
+	
 	/*PWA 시작*/
 	var deferredPrompt;
 	var btnSave = document.getElementById('btn-save');
