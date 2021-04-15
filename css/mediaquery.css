@@ -1,0 +1,176 @@
+@charset "utf-8";
+
+/*미디어쿼리 시작*/
+@media screen and (min-width: 840px) {
+	main [class ^="btn-box"] {
+		text-align: right;
+	}
+	nav .menu-box {width: 460px;}
+	nav .menu-list {right: 30px; width: 400px;}
+	.ct-wrap {right: 30px;}
+}
+
+@media screen and (min-width: 340px) {
+	main section input[type="number"] {
+		width: 70%;
+	}
+	main section li:nth-child(odd) span:first-child {
+		width: 70%;
+	}
+}
+
+/*미디어쿼리 840px*/
+@media screen and (max-width: 840px) {
+
+	nav .menu-box {
+		width: 100%;
+	}
+
+	nav .menu-list {
+		width: 80%;
+		right: 50%;
+		transform: translateX(50%);
+	}
+
+	main [class ^="btn-box"] {
+		text-align: right;
+	}
+
+	.ct-wrap {
+		width: 400px;
+		right: 50%;
+		transform: translateX(50%);
+	}
+
+	.ct-wrap button {
+		height: 50px;
+	}
+
+	.pop-manual .pop-cont {
+		width: 80%;
+	}
+}
+
+/*미디어쿼리 470px*/
+@media screen and (max-width: 470px) {
+
+	header h1 {
+		text-align: left;
+		padding-left: 10px;
+	}
+
+	header h1 span {
+		font-size: 1.8rem;
+	}
+
+
+	main .c-cal label {
+		font-size: 1.4rem;
+	}
+
+	.banner-box .coupang-con2 {
+		width: 100%;
+		overflow: hidden;
+	}
+
+	nav .menu-box {
+		width: 100%;
+	}
+
+	nav .menu-list {
+		width: 80%;
+		right: 50%;
+		transform: translateX(50%);
+	}
+
+	.ct-wrap {
+		width: 80%;
+		right: 50%;
+		transform: translateX(50%);
+	}
+
+	.ct-wrap button {
+		height: 50px;
+	}
+
+	.pop-manual .pop-cont {
+		width: 80%;
+	}
+}
+
+/*미디어 쿼리 340px*/
+@media screen and (max-width: 340px) {
+
+	header h1 {
+		text-align: left;
+		padding-left: 10px;
+	}
+
+	header h1 span {
+		font-size: 4.8vw;
+	}
+
+
+	main .c-cal label,
+	main .e-cal label {
+		font-size: 1.0rem;
+	}
+
+	main section .result-box p {
+		font-size: 1.8rem;
+		line-height: 1.8rem;
+	}
+
+	main [class ^="btn-box"] {
+		text-align: center;
+	}
+
+	main section li:nth-child(odd) span:first-child {
+		width: 60%;
+	}
+
+	main section input[type="number"] {
+		width: 60%;
+	}
+
+	.banner-box .coupang-con2 {
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.banner-box .coupang-con3 {
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.banner-box [class^="banner"] img {
+		width: 100%;
+	}
+
+	nav .menu-box {
+		width: 100%;
+	}
+
+	nav .menu-list {
+		width: 80%;
+		right: 50%;
+		transform: translateX(50%);
+	}
+
+	.ct-wrap {
+		width: 80%;
+		right: 50%;
+		transform: translateX(50%);
+	}
+
+	.ct-wrap button {
+		height: 50px;
+	}
+
+	.pop-manual .pop-cont {
+		width: 80%;
+		font-size: 1.4rem;
+	}
+}
+
+/*미디어 쿼리 종료*/

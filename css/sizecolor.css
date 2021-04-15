@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+body {font-size: 1.8rem; background: #fff; color: #2f3640;}
+h1 {font-size: 2.0rem; font-weight: 600;}
+h2 {font-size: 2.0rem;}
+h3 {font-size: 1.8rem;}
+.font-c1 {color: #f5f6fa;}
+.font-c2 {color: #2f3640;}
+.font-s1 {font-size: 1.4rem;}
+.back-c1 {background-color: #2f3640;}
+.back-c2 {background-color: #1e3932;}
+.back-c3 {background-color: hsl(138, 100%, 50%);}
+.bd-ra {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.bd-rt {
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+}
+.bd-rb {
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;;
+}
+.select-box .option:hover {background: #414b57;}
+
+main section input[type="number"] {background: #e5ff8e;}
+main section select {background: #e5ff8e;}
+main section .input-reset-btn {background: #e5ff8e;}
+main section li .input-won {background: #efefef;}
+
+.lotto-box #btn-lotto span:after {background: #e5ff8e;}
+
+::-webkit-input-placeholder {
+	/* 크롬 4–56 */
+	color: #999;
+	font-weight: 400;
+	font-size: 1.4rem;
+}
+:-moz-placeholder {
+	/* 파이어폭스 4–18 */
+	color: #999;
+	opacity: 1;
+	font-weight: 400;
+	font-size: 1.4rem;
+}
+
+::-moz-placeholder {
+	/* 파이어폭스 19–50 */
+	color: #999;
+	opacity: 1;
+	font-weight: 400;
+	font-size: 1.4rem;
+}
+
+:-ms-input-placeholder {
+	/* 인터넷 익스플로러 10+ */
+	color: #999;
+	font-weight: 400;
+	font-size: 1.4rem;
+}
+
+::placeholder {
+	/* 파이어폭스 51+, 크롬 57+ */
+	color: #999;
+	opacity: 1;
+	font-weight: 400;
+	font-size: 1.4rem;
+}

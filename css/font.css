@@ -16,11 +16,15 @@
 }
 */
 
-@font-face {
+/*@font-face {
     font-family: 'Gsans';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-}
+}*/
 
-body {font-family: 'Gsans', sans-serif;}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600&display=swap');
+
+/*body {font-family: 'Gsans', sans-serif;}*/
+body {font-family: 'Noto Sans KR', sans-serif;}
+
