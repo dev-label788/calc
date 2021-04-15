@@ -114,10 +114,9 @@
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-52KFZCV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
-	<header>
-		<h1><img src="img/logo.jpg" alt="마트랑계산기 로고이미지"><span>마트랑 계산기 :: 마트갈때 필수품</span></h1>
+	<header class="back-c2">
+		<h1 class="font-c1"><img src="img/logo.jpg" alt="마트랑계산기 로고이미지"><span>마트랑 계산기 :: 마트갈때 필수품</span></h1>
 	</header>
-
 	<nav>
 		<div class="btn-menu open">
 			<img id="gtm-menu" src="img/iconmonstr-menu-5-24.png" alt="menu button">
@@ -184,7 +183,7 @@
 		<main>
 			<!--계산기 선택하기-->
 			<div class="select-box">
-				<div class="options-container">
+				<div class="options-container bd-ra back-c1 font-c1">
 					<div class="option">
 						<input type="radio" class="radio" id="calc-1" name="category" />
 						<label for="calc-1">단위당 계산기</label>
@@ -195,7 +194,7 @@
 					</div>
 					<div class="option">
 						<input type="radio" class="radio" id="calc-3" name="category" />
-						<label for="calc-3">할인금액 계산기</label>
+						<label for="calc-3">할인된금액 계산기</label>
 					</div>
 					<div class="option">
 						<input type="radio" class="radio" id="calc-4" name="category" />
@@ -206,7 +205,7 @@
 						<label for="calc-5">양념고기 계산기</label>
 					</div>
 				</div>
-				<div class="selected">
+				<div class="selected bd-ra back-c1 font-c1">
 					&bull; 계산기 선택하기
 				</div>
 			</div>
@@ -217,16 +216,14 @@
 			<section class="a-cal on">
 				<h2 class="blind">단위당 계산기</h2>
 				<form>
-					<fieldset class="input-box clearfix">
+					<fieldset class="input-box clearfix bd-ra">
 						<legend><img src="img/iconmonstr-check-mark-14-16.png" alt=""> 단위당 계산기</legend>
 						<ul class="clearfix">
-							<li>판매가격 :</li>
-							<li><input id="a-in1" type="number" required placeholder="*숫자입력" min="0" max="999999999" step="100"> 원</li>
-							<li>용량 :</li>
-							<li><input id="a-in2" type="number" required placeholder="*숫자입력" min="0" max="999999999" step="1"></li>
-							<li>단위선택 :</li>
-							<li>
-								<select name="unit-box" id="unit-box">
+							<li><span>판매가격</span><span></span></li>
+							<li><input id="a-in1" type="number" required placeholder="*숫자입력" min="0" max="999999999" step="100"><span class="input-reset-btn">&orarr;</span><span class="input-won">원</span>
+							</li>
+							<li><span>용량 (수량/중량/길이)</span><span></span></li>
+							<li><input id="a-in2" type="number" required placeholder="*숫자입력" min="0" max="999999999" step="1"><span class="input-reset-btn">&orarr;</span><select name="unit-box" id="unit-box">
 									<option value="개">개</option>
 									<option value="매">매</option>
 									<option value="mg">mg</option>
@@ -239,14 +236,13 @@
 									<option value="m">m</option>
 								</select>
 							</li>
+							
 						</ul>
-
-						<input class="field-reset" type="reset" value="초기화">
-						<div class="button" id="a-submit">계산하기</div>
+						<div class="button bd-ra" id="a-submit">계산하기</div>
 					</fieldset>
 				</form>
 				<br>
-				<fieldset class="result-box">
+				<fieldset class="result-box bd-rt">
 					<legend><img src="img/iconmonstr-file-22-16.png" alt=""> 계산 결과</legend>
 					<div>
 						<p class="a-result1">1 개당 0 원</p>
@@ -254,10 +250,10 @@
 						<p class="a-result3">100 개당 0 원</p>
 					</div>
 				</fieldset>
-				<div class="btn-box-1">
-					<button class="manual-1" id="gtm-manual" style=" border-radius: 5px; overflow: hidden; cursor: pointer; font-size: 1.4rem;"><img src="img/ico_manual.jpg" alt="" style="height: 20px; vertical-align: middle"> 사용법 안내&nbsp;</button>
+				<div class="btn-box-1 bd-rb back-c1 font-c1">
+					<button class="manual-1 font-s1 bd-ra font-c2" id="gtm-manual" style="background: url(img/ico_manual.jpg) no-repeat; background-color: #efefef;">사용법 안내</button>
 					&nbsp;
-					<button class="btn-calc" id="gtm-calc" style=" border-radius: 5px; overflow: hidden; cursor: pointer; font-size: 1.4rem;"><img src="img/ico_calc.jpg" alt="" style="height: 20px; vertical-align: middle"> 심플 계산기&nbsp;</button>
+					<button class="btn-calc font-s1 bd-ra font-c2" id="gtm-calc" style="background: url(img/ico_calc.jpg) no-repeat; background-color: #efefef;">심플 계산기</button>
 				</div>
 			</section>
 
@@ -265,76 +261,76 @@
 			<section class="b-cal">
 				<h2 class="blind">할인율 계산기</h2>
 				<form>
-					<fieldset class="input-box clearfix">
+					<fieldset class="input-box clearfix bd-ra">
 						<legend><img src="img/iconmonstr-check-mark-14-16.png" alt=""> 할인율 계산기</legend>
 						<ul class="clearfix">
-							<li>정상가격 :</li>
-							<li><input id="b-in1" type="number" required placeholder="*숫자입력" min="0" max="999999999" step="100"> 원</li>
-							<li>할인금액 :</li>
-							<li><input id="b-in2" type="number" required placeholder="*숫자입력" min="0" max="999999999" step="100"> 원</li>
+							<li><span>정상가격</span><span></span></li>
+							<li><input id="b-in1" type="number" required placeholder="*숫자입력" min="0" max="999999999" step="100"><span class="input-reset-btn">&orarr;</span><span class="input-won">원</span></li>
+							<li><span>할인받은 금액</span><span></span></li>
+							<li><input id="b-in2" type="number" required placeholder="*숫자입력" min="0" max="999999999" step="100"><span class="input-reset-btn">&orarr;</span><span class="input-won">원</span></li>
 						</ul>
 
-						<input class="field-reset" type="reset" value="초기화">
-						<div class="button" id="b-submit">계산하기</div>
+						<div class="button bd-ra" id="b-submit">계산하기</div>
 					</fieldset>
 				</form>
 				<br>
-				<fieldset class="result-box">
+				<fieldset class="result-box bd-rt">
 					<legend><img src="img/iconmonstr-file-22-16.png" alt=""> 계산 결과</legend>
 					<div>
 						<p class="b-result1">할인율 0 &percnt;</p>
 						<p class="b-result2">최종 판매가 0 원</p>
 					</div>
 				</fieldset>
-				<div class="btn-box-2">
-					<button class="manual-2" id="gtm-manual" style=" border-radius: 5px; overflow: hidden; cursor: pointer; font-size: 1.4rem;"><img src="img/ico_manual.jpg" alt="" style="height: 20px; vertical-align: middle"> 사용법 안내&nbsp;</button>
+				<div class="btn-box-2 bd-rb back-c1 font-c1">
+					<button class="manual-2 font-s1 bd-ra font-c2" id="gtm-manual" style="background: url(img/ico_manual.jpg) no-repeat; background-color: #efefef;">사용법 안내</button>
 					&nbsp;
-					<button class="btn-calc" id="gtm-calc" style=" border-radius: 5px; overflow: hidden; cursor: pointer; font-size: 1.4rem;"><img src="img/ico_calc.jpg" alt="" style="height: 20px; vertical-align: middle"> 심플 계산기&nbsp;</button>
+					<button class="btn-calc font-s1 bd-ra font-c2" id="gtm-calc" style="background: url(img/ico_calc.jpg) no-repeat; background-color: #efefef;">심플 계산기</button>
 				</div>
 			</section>
 
 			<!--할인금액 계산기 c-cal-->
 			<section class="c-cal">
-				<h2 class="blind">할인금액 계산기</h2>
+				<h2 class="blind">할인된금액 계산기</h2>
 				<form>
-					<fieldset class="input-box clearfix">
-						<legend><img src="img/iconmonstr-check-mark-14-16.png" alt=""> 할인금액 계산기</legend>
+					<fieldset class="input-box clearfix bd-ra">
+						<legend><img src="img/iconmonstr-check-mark-14-16.png" alt=""> 할인된금액 계산기</legend>
 						<ul class="clearfix">
-							<li>정상가격 :</li>
-							<li><input id="c-in1" type="number" required placeholder="*숫자입력" min="0" max="999999999" step="100"> 원</li>
-							<li>할인 :</li>
+							<li><span>정상가격</span><span></span></li>
+							<li><input id="c-in1" type="number" required placeholder="*숫자입력" min="0" max="999999999" step="100"><span class="input-reset-btn">&orarr;</span><span class="input-won">원</span></li>
+							<li><span>선 할인</span><span></span></li>
 							<li>
-								<input id="c-in2" type="number" required placeholder="*숫자입력" min="0" max="99999999" step="1">
-								<input type="radio" id="c-rd1" name="unit-r1" value="1" checked><label for="c-rd1">&percnt;</label>
-								<input type="radio" id="c-rd2" name="unit-r1" value="2"><label for="c-rd2">원</label>
+								<input id="c-in2" type="number" required placeholder="*숫자입력" min="0" max="99999999" step="1"><span class="input-reset-btn">&orarr;</span><select name="c-unit1" id="c-unit1">
+									<option value="1">&percnt;</option>
+									<option value="2">원</option>
+							</select>
 							</li>
-							<li>추가할인 :</li>
+							<li><span>추가 할인 (option)</span><span></span></li>
 							<li>
-								<input id="c-in3" type="number" placeholder="*숫자입력" min="0" max="99999999" step="1">
-								<input type="radio" id="c-rd3" name="unit-r2" value="1"><label for="c-rd3">&percnt;</label>
-								<input type="radio" id="c-rd4" name="unit-r2" value="2" checked><label for="c-rd4">원</label>
+								<input id="c-in3" type="number" placeholder="*숫자입력" min="0" max="99999999" step="1"><span class="input-reset-btn">&orarr;</span><select name="c-unit2" id="c-unit2">
+									<option value="1">&percnt;</option>
+									<option value="2">원</option>
+							</select>
 							</li>
 						</ul>
 
-						<input class="field-reset" type="reset" value="초기화">
-						<div class="button" id="c-submit">계산하기</div>
+						<div class="button bd-ra" id="c-submit">계산하기</div>
 					</fieldset>
 				</form>
 				<br>
-				<fieldset class="result-box">
+				<fieldset class="result-box bd-rt">
 					<legend><img src="img/iconmonstr-file-22-16.png" alt=""> 계산 결과</legend>
 					<div>
-						<p class="c-result1">할인금액 0 원</p>
-						<p class="c-result2">추가할인금액 0 원</p>
+						<p class="c-result1">선 할인금액 0 원</p>
+						<p class="c-result2">추가 할인금액 0 원</p>
 						<p class="c-result3">총 할인금액 0 원</p>
 						<p class="c-result4">총 할인율 0 &percnt;</p>
 						<p class="c-result5">최종 판매가 0 원</p>
 					</div>
 				</fieldset>
-				<div class="btn-box-3">
-					<button class="manual-3" id="gtm-manual" style=" border-radius: 5px; overflow: hidden; cursor: pointer; font-size: 1.4rem;"><img src="img/ico_manual.jpg" alt="" style="height: 20px; vertical-align: middle"> 사용법 안내&nbsp;</button>
+				<div class="btn-box-3 bd-rb back-c1 font-c1">
+					<button class="manual-3 font-s1 bd-ra font-c2" id="gtm-manual" style="background: url(img/ico_manual.jpg) no-repeat; background-color: #efefef;">사용법 안내</button>
 					&nbsp;
-					<button class="btn-calc" id="gtm-calc" style=" border-radius: 5px; overflow: hidden; cursor: pointer; font-size: 1.4rem;"><img src="img/ico_calc.jpg" alt="" style="height: 20px; vertical-align: middle"> 심플 계산기&nbsp;</button>
+					<button class="btn-calc font-s1 bd-ra font-c2" id="gtm-calc" style="background: url(img/ico_calc.jpg) no-repeat; background-color: #efefef;">심플 계산기</button>
 				</div>
 			</section>
 
@@ -342,31 +338,30 @@
 			<section class="d-cal">
 				<h2 class="blind">역할인율 계산기</h2>
 				<form>
-					<fieldset class="input-box clearfix">
+					<fieldset class="input-box clearfix bd-ra">
 						<legend><img src="img/iconmonstr-check-mark-14-16.png" alt=""> 역할인율 계산기</legend>
 						<ul class="clearfix">
-							<li>정상가격 :</li>
-							<li><input id="d-in1" type="number" required placeholder="*숫자입력" min="0" max="999999999" step="100"> 원</li>
-							<li>할인 후 :</li>
-							<li><input id="d-in2" type="number" required placeholder="*숫자입력" min="0" max="999999999" step="100"> 원</li>
+							<li><span>할인 전 가격</span><span></span></li>
+							<li><input id="d-in1" type="number" required placeholder="*숫자입력" min="0" max="999999999" step="100"><span class="input-reset-btn">&orarr;</span><span class="input-won">원</span></li>
+							<li><span>할인 후 가격</span><span></span></li>
+							<li><input id="d-in2" type="number" required placeholder="*숫자입력" min="0" max="999999999" step="100"><span class="input-reset-btn">&orarr;</span><span class="input-won">원</span></li>
 						</ul>
 
-						<input class="field-reset" type="reset" value="초기화">
-						<div class="button" id="d-submit">계산하기</div>
+						<div class="button bd-ra" id="d-submit">계산하기</div>
 					</fieldset>
 				</form>
 				<br>
-				<fieldset class="result-box">
+				<fieldset class="result-box bd-rt">
 					<legend><img src="img/iconmonstr-file-22-16.png" alt=""> 계산 결과</legend>
 					<div>
 						<p class="d-result1">할인율 0 &percnt;</p>
-						<p class="d-result2">할인된 금액 0 원</p>
+						<p class="d-result2">할인받은 금액 0 원</p>
 					</div>
 				</fieldset>
-				<div class="btn-box-4">
-					<button class="manual-4" id="gtm-manual" style=" border-radius: 5px; overflow: hidden; cursor: pointer; font-size: 1.4rem;"><img src="img/ico_manual.jpg" alt="" style="height: 20px; vertical-align: middle"> 사용법 안내&nbsp;</button>
+				<div class="btn-box-4 bd-rb back-c1 font-c1">
+					<button class="manual-4 font-s1 bd-ra font-c2" id="gtm-manual" style="background: url(img/ico_manual.jpg) no-repeat; background-color: #efefef;">사용법 안내</button>
 					&nbsp;
-					<button class="btn-calc" id="gtm-calc" style=" border-radius: 5px; overflow: hidden; cursor: pointer; font-size: 1.4rem;"><img src="img/ico_calc.jpg" alt="" style="height: 20px; vertical-align: middle"> 심플 계산기&nbsp;</button>
+					<button class="btn-calc font-s1 bd-ra font-c2" id="gtm-calc" style="background: url(img/ico_calc.jpg) no-repeat; background-color: #efefef;">심플 계산기</button>
 				</div>
 			</section>
 
@@ -374,27 +369,27 @@
 			<section class="e-cal">
 				<h2 class="blind">양념고기 계산기</h2>
 				<form>
-					<fieldset class="input-box clearfix">
+					<fieldset class="input-box clearfix bd-ra">
 						<legend><img src="img/iconmonstr-check-mark-14-16.png" alt=""> 양념고기 계산기</legend>
 						<ul class="clearfix">
-							<li>전체무게 :</li>
+							<li><span>전체무게</span><span></span></li>
 							<li>
-								<input id="e-in1" type="number" required placeholder="*숫자입력" min="0" max="99999999" step="1">
-								<input type="radio" id="e-rd1" name="unit-er1" value="1" checked><label for="e-rd1">g</label>
-								<input type="radio" id="e-rd2" name="unit-er1" value="2"><label for="e-rd2">Kg</label>
+								<input id="e-in1" type="number" required placeholder="*숫자입력" min="0" max="99999999" step="1"><span class="input-reset-btn">&orarr;</span><select name="e-unit1" id="e-unit1">
+									<option value="1">g</option>
+									<option value="2">Kg</option>
+							</select>
 							</li>
-							<li>고기비율 :</li>
-							<li><input id="e-in2" type="number" required placeholder="*숫자입력" min="0" max="100" step="0.1"> &percnt;</li>
-							<li>판매가격 :</li>
-							<li><input id="e-in3" type="number" required placeholder="*숫자입력" min="0" max="999999999" step="100"> 원</li>
+							<li><span>고기비율</span><span></span></li>
+							<li><input id="e-in2" type="number" required placeholder="*숫자입력" min="0" max="100" step="0.1"><span class="input-reset-btn">&orarr;</span><span class="input-won">&percnt;</span></li>
+							<li><span>판매가격</span><span></span></li>
+							<li><input id="e-in3" type="number" required placeholder="*숫자입력" min="0" max="999999999" step="100"><span class="input-reset-btn">&orarr;</span><span class="input-won">원</span></li>
 						</ul>
 
-						<input class="field-reset" type="reset" value="초기화">
-						<div class="button" id="e-submit">계산하기</div>
+						<div class="button bd-ra" id="e-submit">계산하기</div>
 					</fieldset>
 				</form>
 				<br>
-				<fieldset class="result-box">
+				<fieldset class="result-box bd-rt">
 					<legend><img src="img/iconmonstr-file-22-16.png" alt=""> 계산 결과</legend>
 					<div>
 						<p class="e-result1">전체무게 0g 중</p>
@@ -404,10 +399,10 @@
 						<p class="e-result5"><b>고기</b>만 100g 당 0 원</p>
 					</div>
 				</fieldset>
-				<div class="btn-box-5">
-					<button class="manual-5" id="gtm-manual" style=" border-radius: 5px; overflow: hidden; cursor: pointer; font-size: 1.4rem;"><img src="img/ico_manual.jpg" alt="" style="height: 20px; vertical-align: middle"> 사용법 안내&nbsp;</button>
+				<div class="btn-box-5 bd-rb back-c1 font-c1">
+					<button class="manual-5 font-s1 bd-ra font-c2" id="gtm-manual" style="background: url(img/ico_manual.jpg) no-repeat; background-color: #efefef;">사용법 안내</button>
 					&nbsp;
-					<button class="btn-calc" id="gtm-calc" style=" border-radius: 5px; overflow: hidden; cursor: pointer; font-size: 1.4rem;"><img src="img/ico_calc.jpg" alt="" style="height: 20px; vertical-align: middle"> 심플 계산기&nbsp;</button>
+					<button class="btn-calc font-s1 bd-ra font-c2" id="gtm-calc" style="background: url(img/ico_calc.jpg) no-repeat; background-color: #efefef;">심플 계산기</button>
 				</div>
 			</section>
 
@@ -428,7 +423,7 @@
 			<!-- 단락 여백 -->
 			<div class="blank-box2"></div>
 			<!-- 쿠팡 배너 광고 -->
-			<div class="banner2">
+			<div class="banner2 bd-ra">
 				<!--400x140-->
 				<a href="https://coupa.ng/bVNGwc" target="_blank" id="gtm-cp-rocket">
 					<div class="banner-imgbox"><img src="img/banner/banner_cp_img1.png" alt="쿠팡로켓배송"></div>
@@ -440,14 +435,14 @@
 			<!-- 쿠팡 배너 광고 종료 -->
 
 			<!-- 자체 배너 광고 -->
-			<div class="banner1">
+			<div class="banner1 bd-ra">
 				<a target="_blank" href="https://smartstore.naver.com/gawimonster" id="gtm-banner-gm">
 					<div class="banner-imgbox"><img src="img/banner/banner_gm_400x140.png" alt="가위몬스터배너"></div>
 				</a>
 			</div>
 			<!-- 단락 여백 -->
 			<div class="blank-box2"></div>
-			<div class="banner3">
+			<div class="banner3 bd-ra">
 				<a target="_blank" href="https://www.boxoffice.kro.kr?utm_source=banner&utm_medium=martlang" id="gtm-banner-mp">
 					<div class="banner-linkbox"><img src="img/banner/banner_mp_400x140.png" alt="가위몬스터배너"></div>
 				</a>
@@ -460,18 +455,18 @@
 
 		<!-- 오늘의 로또 번호-->
 		<div class="lotto-box">
-			<h4>이번주 대박 로또번호</h4>
-			<div class="lotto-box-inner">
+			<h4 class="bd-rt back-c1 font-c1">이번주 대박 로또번호</h4>
+			<div class="lotto-box-inner bd-rb">
 				<div id="lotto-number"></div>
-				<div id="btn-lotto"><span id="gtm-lotto-span">번호 다시 받기</span>&nbsp;<img id="gtm-lotto" src="img/iconmonstr-redo-5-32.png" alt="로또번호생성버튼"></div>
+				<div id="btn-lotto"><span class="font-s1" id="gtm-lotto-span">번호 다시 받기</span>&nbsp;<img id="gtm-lotto" src="img/iconmonstr-redo-5-32.png" alt="로또번호생성버튼"></div>
 				<canvas id="canvas" height="50" width="292"></canvas>
-				<p>통계적으로 당첨 확률이 높은 조합만 생성 됩니다.</p>
+				<p class="font-s1">통계적으로 당첨 확률이 높은 조합만 생성 됩니다.</p>
 			</div>
 		</div>
 		<!-- 오늘의 로또 번호 종료-->
 
 		<!-- 몇번째 주차인지 시작 -->
-		<div class="today-box">
+		<div class="today-box bd-ra back-c1 font-c1 font-s1">
 			<p class="today-result">오늘은 2021년 2월 22일 월요일 &rarr; 2월의 4번째 주</p>
 			<div class="today-box-br"></div>
 			<p class="day-result1"></p>
@@ -484,8 +479,8 @@
 
 		<!--공지사항-->
 		<div class="notice-box">
-			<h4>공지사항</h4>
-			<div>
+			<h4 class="back-c1 bd-rt font-c1">공지사항</h4>
+			<div class="bd-rb font-s1">
 				<p>** '양념고기 계산기' 기능이 새롭게 생겼습니다. **</p>
 				<p>&nbsp;누구나 한번쯤 이런 경우가 있으실 겁니다. 마트에서 양념고기를 싸게 팔아서 1kg을 사왔는데 집에와서 보니 양이 한근밖에는 안나오네요. 그제서야 택에서 원재료함량을 보니 고기비율은 60%이고 나머지는 다 양념이네요. 그렇다면 이걸 싸게 산건지 비싸게 산건지 고민하게 됩니다.</p>
 				<p>&nbsp;이런 경우 이제는 '양념고기 계산기'로 고기만 100g당 얼마인지 쉽게 계산할 수 있어서 현명한 쇼핑을 하는데 도움이 됩니다.</p>
@@ -493,8 +488,8 @@
 		</div>
 		<!--공지사항 종료-->
 
-		<footer>
-			<input type="button" id="btn-save" value="&bull; 마트랑계산기 바로가기 만들기">
+		<footer class="back-c2 bd-rt font-c1 font-s1">
+			<input type="button" class="bd-ra back-c3" id="btn-save" value="&bull; 마트랑계산기 바로가기 만들기">
 			<address>
 				All rights reserved 2021 &copy;LABEL788<br>
 				<a href="mailto:label788.dev@gmail.com?Subject=마트랑%20계산기%20문의메일%20">email to :
@@ -502,10 +497,10 @@
 				www.goodprice.kro.kr
 			</address>
 			<div class="btn-share">
-				<a href="#" onclick="javascript:window.open('http://share.naver.com/web/shareView.nhn?url='+encodeURIComponent(document.URL)+'&title='+encodeURIComponent(document.title), 'naversharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" alt="네이버공유하기"><button id="gtm-share-naver" style="margin-top: 5px; border-radius: 5px; overflow: hidden; cursor: pointer;"><img src="img/ico_naver.jpg" alt="" style="height: 20px; vertical-align: middle;"> 네이버 공유&nbsp;</button></a>
+				<a href="#" onclick="javascript:window.open('http://share.naver.com/web/shareView.nhn?url='+encodeURIComponent(document.URL)+'&title='+encodeURIComponent(document.title), 'naversharedialog', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" alt="네이버공유하기"><button class="bd-ra" id="gtm-share-naver">네이버 공유</button></a>
 				<span>&nbsp;</span>
 				<a id="kakao-link-btn" href="javascript:sendLink()">
-					<button id="gtm-share-katalk" style="margin-top: 5px; border-radius: 5px; overflow: hidden; cursor: pointer;"><img src="img/ico_katalk.jpg" alt="" style="height: 20px; vertical-align: middle;"> 카카오톡 공유&nbsp;</button>
+					<button class="bd-ra" id="gtm-share-katalk">카카오톡 공유</button>
 				</a>
 				<script type="text/javascript">
 					Kakao.init('6c8766fa6cfc6f5ab7f35fd7d4c546f4');
@@ -567,7 +562,7 @@
 			<div onclick="history.back();" class="pop-close">
 				<img src="img/iconmonstr-x-mark-thin-24.png" alt="">
 			</div>
-			<div class="pop-cont">
+			<div class="pop-cont bd-ra">
 				<ul>
 					<li>&#8280; 단위당 계산기 사용법 <span>&rsaquo;</span></li>
 					<li class="slide-cont">
@@ -590,15 +585,15 @@
 						<p>5&rpar; '계산 결과' 부분에서 '할인율' 10&percnt;와 '최종 판매가' 8,910원을 확인할 수 있습니다.</p>
 						<p>6&rpar; 계산 결과 부분의 아래쪽에 '쿠팡 검색창'을 활용하셔서 인터넷 최저가를 검색해 보세요.</p>
 					</li>
-					<li>&#8280; 할인금액 계산기 사용법 <span>&rsaquo;</span></li>
+					<li>&#8280; 할인된금액 계산기 사용법 <span>&rsaquo;</span></li>
 					<li class="slide-cont">
 						<p>1&rpar; 예를 들어 10,000원짜리 상품을 기본 10&percnt; 할인해주고, 적립카드 보유시 할인된 금액에서 추가적으로 5&percnt; 할인해 준다면,
 						</p>
 						<p>2&rpar; '정상가격' 부분에는 10000을 입력하고</p>
-						<p>3&rpar; '할인' 부분에는 10을 입력한 후 '&percnt;' 를 선택 합니다. </p>
-						<p>4&rpar; '추가할인' 부분에는 5를 입력한 후 '&percnt;' 를 선택 합니다.</p>
+						<p>3&rpar; '선 할인' 부분에는 10을 입력한 후 '&percnt;' 를 선택 합니다. </p>
+						<p>4&rpar; '추가 할인' 부분에는 5를 입력한 후 '&percnt;' 를 선택 합니다.</p>
 						<p>5&rpar; '계산하기' 버튼을 누르세요.</p>
-						<p>6&rpar; '계산 결과' 부분에서 '할인금액' 1,000원, '추가할인금액' 450원, '총 할인금액' 1,450원, '총 할인율' 14.5&percnt;, '최종
+						<p>6&rpar; '계산 결과' 부분에서 '선 할인금액' 1,000원, '추가 할인금액' 450원, '총 할인금액' 1,450원, '총 할인율' 14.5&percnt;, '최종
 							판매가' 8,550원을 확인할 수 있습니다.</p>
 						<p>7&rpar; 계산 결과 부분의 아래쪽에 '쿠팡 검색창'을 활용하셔서 인터넷 최저가를 검색해 보세요.</p>
 					</li>
@@ -624,7 +619,7 @@
 						<p>7&rpar; 계산 결과 부분의 아래쪽에 '쿠팡 검색창'을 활용하셔서 인터넷 최저가를 검색해 보세요.</p>
 					</li>
 				</ul>
-				<div class="pop-con-text">현명한 소비활동의 첫걸음 마트랑 계산기</div>
+				<div class="pop-con-text bd-ra">현명한 소비활동의 첫걸음 마트랑 계산기</div>
 			</div>
 		</div>
 
