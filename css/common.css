@@ -232,6 +232,10 @@ main section.on {
 	display: block;
 }
 
+main section fieldset {
+	padding: 6px 14px 20px;
+}
+
 main section fieldset img {
 	height: 13px;
 }
@@ -257,7 +261,7 @@ main section li:nth-child(odd) span:last-child {
 	width: 84px;
 }
 main section li:last-child {
-	margin-bottom: 20px;
+	margin-bottom: 28px;
 }
 
 main section input[type="number"] {

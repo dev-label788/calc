@@ -13,7 +13,7 @@ h3 {font-size: 1.8rem;}
 
 .back-c1 {background-color: #abd8db;} /*카테고리*/
 .back-c2 {background-color: #fcb2af;} /*헤드*/
-.back-c3 {background: hsla(2, 93%, 75%, 0.97);}
+.back-c3 {background: #fb8884;} /*팝업 배경*/
 
 .bd-ra {
 	-webkit-border-radius: 15px;
@@ -93,7 +93,7 @@ main section input[type="number"] {background: #ffe1e0;}
 main section select {background: #ffe1e0;}
 main section .input-reset-btn {background: #ffe1e0;}
 main section li .input-won {background: #efefef;}
-main section .result-box span {color: #ff6761;}
+main section .result-box span {color: #fb8884;}
 
 .lotto-box .lotto-box-inner {border: 1px solid #abd8db;}
 .lotto-box #btn-lotto span:after {background: #ffe1e0;}
