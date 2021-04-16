@@ -615,6 +615,7 @@ footer address {
 .pop-manual .pop-cont ul li:nth-child(odd) {
 	height: 40px;
 	line-height: 40px;
+	font-weight: bold;
 	cursor: pointer;
 }
 
