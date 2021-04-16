@@ -295,8 +295,8 @@ $(function () {
 		}, 100);
 		window.location.hash = "#open";
 	});
-	/*c-cal에서 선택*/
-	$popM3.on('click', function () {
+	/*d-cal에서 선택*/
+	$popM4.on('click', function () {
 		$popMn.fadeIn(200);
 		$popSlide.stop().slideUp();
 		$popList.eq(5).stop().slideDown();
@@ -305,8 +305,8 @@ $(function () {
 		}, 100);
 		window.location.hash = "#open";
 	});
-	/*d-cal에서 선택*/
-	$popM4.on('click', function () {
+	/*c-cal에서 선택*/
+	$popM3.on('click', function () {
 		$popMn.fadeIn(200);
 		$popSlide.stop().slideUp();
 		$popList.eq(7).stop().slideDown();
