@@ -1,39 +1,122 @@
 @charset "utf-8";
 
-body {font-size: 1.8rem; background: #fff; color: #2f3640;}
+body {font-size: 1.8rem; background: #fff; color: #00adb9;}
 h1 {font-size: 2.0rem; font-weight: 600;}
 h2 {font-size: 2.0rem;}
 h3 {font-size: 1.8rem;}
-.font-c1 {color: #f5f6fa;}
-.font-c2 {color: #2f3640;}
+
+.font-c1 {color: #00adb9;}
+.font-c2 {color: #00adb9;} /*사용법안내, 심플계산기선택*/
+.font-c3 {color: #fff;}
+
 .font-s1 {font-size: 1.4rem;}
-.back-c1 {background-color: #2f3640;}
-.back-c2 {background-color: #1e3932;}
-.back-c3 {background-color: hsl(138, 100%, 50%);}
+
+.back-c1 {background-color: #abd8db;} /*카테고리*/
+.back-c2 {background-color: #fcb2af;} /*헤드*/
+.back-c3 {background: hsla(2, 93%, 75%, 0.97);}
+
 .bd-ra {
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
 }
 .bd-rt {
-	-webkit-border-radius: 5px 5px 0 0;
-	-moz-border-radius: 5px 5px 0 0;
-	border-radius: 5px 5px 0 0;
+	-webkit-border-radius: 15px 15px 0 0;
+	-moz-border-radius: 15px 15px 0 0;
+	border-radius: 15px 15px 0 0;
 }
 .bd-rb {
-	-webkit-border-radius: 0 0 5px 5px;
-	-moz-border-radius: 0 0 5px 5px;
-	border-radius: 0 0 5px 5px;;
+	-webkit-border-radius: 0 0 15px 15px;
+	-moz-border-radius: 0 0 15px 15px;
+	border-radius: 0 0 15px 15px;;
 }
-.select-box .option:hover {background: #414b57;}
 
-main section input[type="number"] {background: #e5ff8e;}
-main section select {background: #e5ff8e;}
-main section .input-reset-btn {background: #e5ff8e;}
+/*.button {
+	box-shadow: 0 3px 6px rgba(0, 0, 0, .16), 
+							0 3px 6px rgba(110, 80, 20, .4),
+				inset 0 -2px 5px 1px rgba(139, 66, 8, 1),
+				inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+	background-image: linear-gradient(160deg, #a54e07, #b47e11, #fef1a2, #bc881b, #a54e07);
+	border: 1px solid #a55d07;
+	color: rgb(120, 50, 5);
+	text-shadow: 0 2px 2px rgb(198, 191, 163);
+}
+
+.button:active {
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .16),
+							0 1px 3px rgba(110, 80, 20, .4),
+				inset 0 -2px 5px 1px #b17d10,
+				inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+	color: rgb(155, 90, 0);
+}*/
+
+.button {
+	text-align: center;
+	display: inline-block;
+	outline: none;
+	box-sizing: border-box;
+	border: none;
+	height: 40px;
+	padding: 8px 10px;
+	cursor: pointer;
+	text-decoration: none;
+	white-space: nowrap;
+	font-weight: bold;
+	transition: all 0.05s;
+	color: #fff;
+
+	text-shadow: 1px 1px 3px #B76E79, -1px -1px 3px #B76E79;
+  text-decoration: none;
+  background: transparent;
+  box-shadow: inset 0px 1px 5px rgba(255,255,255,1),
+										0px 3px 5px rgba(85, 0, 0, 0.3);
+  border: 1px solid #ba6;
+	
+  border-color: #D9A3A9;
+  background: linear-gradient(top, #DDA6AE, #FFE6E9 25%, #ffffff 38%, #FFE6E9 63%, #f7f7f7 87%, rgba(38, 38, 38, 0.8));
+  background: -webkit-linear-gradient(top,  #DDA6AE, #FFE6E9 25%, #ffefef 38%, #D9A3A9  63%, #FFE6E9 87%, #DDA6AE);
+	/*  background: linear-gradient(180deg,#FFE6E9 0%,#DDA6AE 49%, #B76E79 51%,#DDA6AE 100%);*/
+}
+.button:active {
+	-webkit-transform: translateY(2px);
+  transform: translateY(2px);
+	box-shadow: inset 0px 1px 1px rgba(255,255,255,1),
+										0px 1px 3px rgba(85, 0, 0, 0.3);
+}
+
+.select-box .option:hover {background: #ffe1e0;}
+.select-box .options-container::-webkit-scrollbar { background: #00adb9;}
+.select-box .options-container::-webkit-scrollbar-thumb { background: #525861;}
+
+main section fieldset {border: 1px solid #abd8db;}
+main section input[type="number"] {background: #ffe1e0;}
+main section select {background: #ffe1e0;}
+main section .input-reset-btn {background: #ffe1e0;}
 main section li .input-won {background: #efefef;}
+main section .result-box span {color: #ff6761;}
 
-.lotto-box #btn-lotto span:after {background: #e5ff8e;}
+.lotto-box .lotto-box-inner {border: 1px solid #abd8db;}
+.lotto-box #btn-lotto span:after {background: #ffe1e0;}
+.lotto-box #btn-lotto span {border-bottom: 1px solid #abd8db;}
 
+.notice-box div {border: 1px solid #abd8db;}
+
+.pop-manual .pop-cont ul {background: #fff;}
+.pop-manual .pop-con-text {background: #abd8db;}
+.pop-manual .pop-cont ul li:nth-child(odd) {
+	color: #fff;
+	text-shadow: 1px 1px 3px #bc3a35, -1px -1px 2px #bc3a35;
+	background-color: #fcb2af;
+	box-shadow: inset 0px 1px 1px rgba(255,255,255,1);
+}
+
+nav .menu-list p {background: #ffe1e0; color: #ff6761;}
+
+footer #btn-save {border: 1px solid #fff; color: #bc3a35; background: hsla(2, 93%, 75%, 0.9);}
+footer #btn-save:active {background: #aaa;}
+
+
+.banner-box .coupas {color: #999;}
 ::-webkit-input-placeholder {
 	/* 크롬 4–56 */
 	color: #999;
