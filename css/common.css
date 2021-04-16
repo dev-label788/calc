@@ -408,8 +408,8 @@ main .c-cal .result-box p:nth-child(n+3) {
 	margin: auto;
 	overflow: hidden;
 	background-size: auto auto;
-	background-color: rgba(255, 234, 216, 1);
-	background-image: repeating-linear-gradient(135deg, transparent, transparent 10px, rgba(255, 223, 195, 1) 10px, rgba(255, 223, 195, 1) 20px );
+	background-color: #ffd2d1;
+	background-image: repeating-linear-gradient(135deg, transparent, transparent 10px, #ffe1e0 10px, #ffe1e0 20px );
 }
 .banner-box .banner-imgbox {
 	width: 100%;
