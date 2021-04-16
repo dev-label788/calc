@@ -151,6 +151,7 @@ nav .menu-box.open,
 .select-box {
   position: relative;
   width: 100%;
+	font-weight: bold;
 }
 
 .select-box .options-container {
