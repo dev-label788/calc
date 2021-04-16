@@ -537,8 +537,8 @@ footer address {
 	line-height: 20px;
 	padding: 0px 5px 0px 25px;
 }
-#gtm-share-naver {background: url(../img/ico_naver.jpg) no-repeat; background-color: hsl(138, 100%, 50%);}
-#gtm-share-katalk {background: url(../img/ico_katalk.jpg) no-repeat; background-color: hsl(54, 100%, 73%);}
+#gtm-share-naver {background: url(../img/ico_naver.jpg) no-repeat; background-color: #00ff4c; color: #00601d;}
+#gtm-share-katalk {background: url(../img/ico_katalk.jpg) no-repeat; background-color: #fff175; color: #4b2b2c;}
 
 /*팝업 메뉴얼*/
 .pop-manual {
