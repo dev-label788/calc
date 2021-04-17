@@ -111,7 +111,7 @@ nav .menu-list h4 {display: inline;}
 nav .menu-list > p + ul > li:nth-child(odd) {
 	border-bottom: 1px solid;
 }
-nav .menu-list ul span {
+nav .menu-list ul > li > span {
 	float: right;
 }
 nav .menu-list ul img {
@@ -123,8 +123,23 @@ nav .menu-list ul img {
 }
 nav .menu-list ul ul {
 	padding-left: 35px;
+}	
+nav .menu-list ul ul > li {
+	position: relative;
 }
+nav .menu-list ul ul > li span {
+	position: absolute;
+	animation: slidein-nav 0.3s alternate infinite;
+}
+@keyframes slidein-nav {
+	0% {
+		transform: translateX(10px)
+	}
 
+	100% {
+		transform: translateX(15px)
+	}
+}
 .ct-wrap {
 	position: absolute;
 	top: 0px;
