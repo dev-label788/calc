@@ -585,12 +585,11 @@ footer address {
 }
 
 .pop-manual .pop-cont ul li {
-	text-align: justify;
-	padding-left: 40px;
+	padding-left: 20px;
 	padding-right: 20px;
 	text-indent: -20px;
 }
-
+.pop-manual .pop-cont ul li:nth-child(odd) {padding-left: 40px;}
 .pop-manual .pop-cont ul li span {
 	position: relative;
 	animation: slidein 0.3s alternate infinite;
