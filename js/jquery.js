@@ -50,7 +50,7 @@ $(function () {
 	optionsList.each(function () {
 		var o = $(this);
 		o.on('click', function () {
-			selected.html(o.children('label').text());
+			selected.html('&bull;' + o.children('label').text());
 			optionsContainer.removeClass('active');
 			var calcSel = o.children('label').attr('for');
 			if (calcSel == 'calc-2') {
