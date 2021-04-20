@@ -257,14 +257,14 @@ main section fieldset img {
 }
 
 main section li {
-	height: 30px;
-	line-height: 30px;
 	text-align: center;
 }
 
 main section li:nth-child(odd) {
 /*	width: 82%;*/
-	margin-bottom: -5px;
+	height: 28px;
+	line-height: 28px;
+	margin-bottom: 4px;
 	font-size: 1.4rem
 }
 main section li:nth-child(odd) span:first-child {
@@ -277,46 +277,31 @@ main section li:nth-child(odd) span:last-child {
 	width: 84px;
 }
 main section li:last-child {
-	margin-bottom: 28px;
+	margin-bottom: 30px;
 }
 
 main section input[type="number"] {
 	font-weight: bold;
-	height: 30px;
-	line-height: 30px;
+	height: 36px;
+	line-height: 36px;
 	padding: 0 10px;
 	text-align: center;
 	vertical-align: middle;
 	box-sizing: border-box;
+	border-radius: 15px 0 0 15px;
 }
 main section input[type="number"]:focus {
 	outline: none;
 }
 
-main section li span {vertical-align: middle;}
-
-main section li .input-won {display: inline-block; width: 60px; margin-left: 4px; padding-left: 4px; text-align: left; box-sizing: border-box;}
-/*main select#unit-box*/
-main section select {
-	width: 60px;
-	height: 30px;
-	line-height: 30px;
-	padding: 0 2px;
-	margin-left: 4px;
-	font-weight: bold;
-	vertical-align: middle;
-	cursor: pointer;
-}
-main section select:focus {
-	outline: none;
-}
-
 main section .input-reset-btn {
 	display: inline-block;
-	height: 30px;
+	height: 36px;
+	line-height: 36px;
 	padding-right: 10px;
 	cursor: pointer;
 	transition: all 0.1s;
+	border-radius: 0 15px 15px 0;
 }
 
 main section .input-reset-btn:active {
@@ -324,6 +309,28 @@ main section .input-reset-btn:active {
 }
 
 main section .input-reset-btn:focus {
+	outline: none;
+}
+main section li span {vertical-align: middle;}
+
+main section li .input-won {display: inline-block; height: 36px; line-height: 36px; width: 60px; margin-left: 4px; padding: 0 4px; text-align: center; box-sizing: border-box; border-radius: 15px;}
+
+/*main select#unit-box*/
+main section select {
+	-ms-text-align-last: center;
+  -moz-text-align-last: center;
+	text-align-last: center;
+	width: 60px;
+	height: 36px;
+	line-height: 36px;
+	padding: 0 2px;
+	margin-left: 4px;
+	font-weight: bold;
+	vertical-align: middle;
+	border-radius: 15px;
+	cursor: pointer;
+}
+main section select:focus {
 	outline: none;
 }
 
